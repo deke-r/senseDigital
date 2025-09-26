@@ -1,0 +1,19 @@
+.btn{
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(90deg,#4650a0 .57%,#64c7b4 97.31%) #357aff;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    letter-spacing: 0;
+    line-height: 140%;
+    min-height: 40px;
+    outline: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+    transition: unset;
+    z-index: 1
+}

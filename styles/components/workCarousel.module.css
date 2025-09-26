@@ -1,0 +1,132 @@
+.carouselSection {
+    position: relative;
+    padding: 140px 0 40px;
+    background-color: #131313;
+    z-index: 2;
+  }
+  
+  .slideBg {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contentWrapper {
+    max-width: 1280px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  
+  .moreIcon {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .description {
+    font-size: 18px;
+    margin: 16px 0 30px;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+  
+  .statsWrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  .statCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  .statLabel {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #3df0e6;
+  }
+  
+  .statValue {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .statDesc {
+    font-size: 14px;
+    color: #adacad;
+  }
+  
+  .statImg {
+    width: 80px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(61, 240, 230, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: 20px; /* distance from left edge */
+  }
+  
+  .carousel-control-next {
+    right: 20px; /* distance from right edge */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none; /* remove default Bootstrap arrow */
+  }
+  
+  .carousel-control-prev svg,
+  .carousel-control-next svg {
+    width: 20px;
+    height: 15px;
+    fill: #fff;
+  }
+  
+  
+  .dots {
+    bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .slideBg {
+      height: 500px;
+    }
+    .title {
+      font-size: 28px;
+    }
+    .description {
+      font-size: 16px;
+    }
+  }
+  

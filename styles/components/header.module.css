@@ -1,0 +1,30 @@
+.ctaLink {
+  background-color: var(--primary-color);
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.ctaLink:hover {
+  background-color: #fff;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+}
+
+
+.navLink{
+  color: black !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding-inline: 20px;
+}
+
+.dropdown-menu{
+  font-weight: 600 !important;
+}
+
+
+.navbarTogglerIcon{
+  background-image: url('/img/navbaricon.png') !important;
+}

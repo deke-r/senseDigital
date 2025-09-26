@@ -1,0 +1,137 @@
+/* styles/components/trusted-section.module.css */
+.trustedSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.logoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.companyLogo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.3s ease;
+}
+
+.logoItem:hover .companyLogo {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .trustedSection {
+    padding: 60px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+  
+  .logosContainer {
+    gap: 40px;
+  }
+  
+  .companyLogo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .trustedSection {
+    padding: 50px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .logosContainer {
+    gap: 30px;
+    padding: 30px 0;
+  }
+  
+  .logoItem {
+    padding: 15px;
+  }
+  
+  .companyLogo {
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .logosContainer {
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .logoItem {
+    padding: 10px;
+  }
+  
+  .companyLogo {
+    max-width: 60px;
+    max-height: 30px;
+  }
+}

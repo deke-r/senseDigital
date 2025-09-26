@@ -1,0 +1,411 @@
+/* styles/pages/thank-you.module.css */
+
+/* Hero Section */
+.heroSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  margin-bottom: 60px;
+}
+
+.successIcon {
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.pageTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.contentSection {
+  margin-bottom: 80px;
+}
+
+.contentCard {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contentTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  background: #e9ecef;
+  transform: translateY(-5px);
+}
+
+.stepNumber {
+  background: var(--primary-color);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stepContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  margin-bottom: 15px;
+}
+
+.stepContent p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  margin-bottom: 80px;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  margin-bottom: 20px;
+}
+
+.ctaSubtitle {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: linear-gradient(45deg, var(--primary-color), #0056b3);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  color: #ffffff;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 13px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Contact Info Section */
+.contactInfoSection {
+  margin-bottom: 80px;
+}
+
+.contactCard {
+  background: var(--card-bg);
+  color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contactIcon {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.contactCard h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.contactCard p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contactDetails {
+  margin-bottom: 30px;
+}
+
+.contactDetails p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contactBtn {
+  background: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #0056b3;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Back to Home Section */
+.backToHomeSection {
+  margin-bottom: 60px;
+}
+
+.homeLink {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+}
+
+.homeLink:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .heroSection {
+    padding: 60px 0;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contentCard {
+    padding: 40px 30px;
+  }
+  
+  .contentTitle {
+    font-size: 2rem;
+  }
+  
+  .step {
+    padding: 25px;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .contentCard {
+    padding: 30px 25px;
+  }
+  
+  .contentTitle {
+    font-size: 1.8rem;
+  }
+  
+  .step {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .stepNumber {
+    align-self: center;
+  }
+  
+  .stepContent h3 {
+    font-size: 1.3rem;
+  }
+  
+  .stepContent p {
+    font-size: 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .contactCard {
+    padding: 30px 25px;
+  }
+  
+  .contactCard h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSection {
+    padding: 40px 0;
+  }
+  
+  .contentCard {
+    padding: 25px 20px;
+  }
+  
+  .contentTitle {
+    font-size: 1.6rem;
+  }
+  
+  .step {
+    padding: 15px;
+  }
+  
+  .stepContent h3 {
+    font-size: 1.2rem;
+  }
+  
+  .stepContent p {
+    font-size: 0.9rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.6rem;
+  }
+  
+  .contactCard {
+    padding: 25px 20px;
+  }
+  
+  .contactCard h3 {
+    font-size: 1.4rem;
+  }
+  
+  .contactCard p {
+    font-size: 1rem;
+  }
+}

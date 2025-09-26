@@ -1,0 +1,26 @@
+/* styles/components/cta-btn.module.css */
+.ctaBtn {
+  background: linear-gradient(45deg, var(--primary-color), #0056b3);
+  color: #ffffff !important;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  border: 2px solid transparent;
+}
+
+.ctaBtn:hover {
+  background: linear-gradient(45deg, #0056b3, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  color: #ffffff !important;
+}
+
+.ctaBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+}

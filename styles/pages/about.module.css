@@ -1,0 +1,252 @@
+/* styles/pages/about.module.css */
+
+/* Hero Section */
+.heroSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  margin-bottom: 60px;
+}
+
+.pageTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.heroImage {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.missionSection {
+  margin-bottom: 80px;
+}
+
+.missionCard {
+  background: var(--card-bg);
+  color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+}
+
+.missionIcon {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.missionCard h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.missionCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* Stats Section */
+.statsSection {
+  background: var(--dark-bg);
+  color: #ffffff;
+  padding: 80px 0;
+  border-radius: 15px;
+  margin-bottom: 80px;
+}
+
+.statCard {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.statIcon {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* Story Section */
+.storySection {
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.storyText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+}
+
+/* Values Section */
+.valuesSection {
+  margin-bottom: 60px;
+}
+
+.valueCard {
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.valueCard:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.1);
+}
+
+.valueCard h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  margin-bottom: 15px;
+}
+
+.valueCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .heroSection {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .missionCard {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .statsSection {
+    padding: 60px 0;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .storyText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSection {
+    padding: 40px 0;
+  }
+  
+  .missionCard {
+    padding: 25px 15px;
+  }
+  
+  .missionCard h3 {
+    font-size: 1.5rem;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .valueCard {
+    padding: 25px 20px;
+  }
+  
+  .valueCard h4 {
+    font-size: 1.3rem;
+  }
+}

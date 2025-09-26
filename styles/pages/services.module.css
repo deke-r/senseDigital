@@ -1,0 +1,368 @@
+/* styles/pages/services.module.css */
+
+/* Hero Section */
+.heroSection {
+  padding: 80px 0;
+  border-radius: 15px;
+  margin-bottom: 60px;
+}
+
+.pageTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: linear-gradient(45deg, var(--primary-color), #0056b3);
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.servicesSection {
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-bg);
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.serviceCard {
+  /* background: #ffffff; */
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.serviceIcon {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  width: 60px;
+  height: 60px;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  margin-bottom: 15px;
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Process Section */
+.processSection {
+  margin-bottom: 80px;
+}
+
+.processCard {
+  background: var(--card-bg);
+  color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.processCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.processNumber {
+  background: var(--primary-color);
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 25px;
+}
+
+.processCard h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.processCard p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: var(--dark-bg);
+  color: #ffffff;
+  padding: 80px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.ctaSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background: linear-gradient(45deg, var(--primary-color), #0056b3);
+  color: #ffffff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .heroSection {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .heroActions {
+    justify-content: center;
+  }
+  
+  .serviceCard {
+    padding: 30px 25px;
+  }
+  
+  .processCard {
+    padding: 30px 25px;
+  }
+  
+  .ctaSection {
+    padding: 60px 30px;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .serviceCard {
+    padding: 25px 20px;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.3rem;
+  }
+  
+  .processCard {
+    padding: 25px 20px;
+  }
+  
+  .processCard h4 {
+    font-size: 1.2rem;
+  }
+  
+  .ctaSection {
+    padding: 50px 25px;
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSection {
+    padding: 40px 0;
+  }
+  
+  .serviceCard {
+    padding: 20px 15px;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.2rem;
+  }
+  
+  .processCard {
+    padding: 20px 15px;
+  }
+  
+  .processCard h4 {
+    font-size: 1.1rem;
+  }
+  
+  .ctaSection {
+    padding: 40px 20px;
+  }
+  
+  .ctaTitle {
+    font-size: 1.6rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+}
