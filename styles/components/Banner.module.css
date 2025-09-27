@@ -1,40 +1,65 @@
-.banner {
-    padding: 120px 0;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .content {
-    max-width: 950px;
-  }
-  
+.banner{
+  background-color: black !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.heading {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -o-linear-gradient(linear-gradient(90.04deg,#4650a0 .6%,#64c7b4 22.79%));
+  background-image: linear-gradient(90deg,#fff 3.19%,#3a4ef9 10.49%,#3a4ef9 19.91%,#fff 30.81%,#3df3e5 64.52%);
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 110%;
+  margin-bottom: 20px;
+  max-width: 950px
+}
+
+
+@media(max-width: 1359px) {
   .heading {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(
-      90deg,
-      rgb(255, 255, 255) 3.19%,
-      rgb(58, 78, 249) 10.49%,
-      rgb(58, 78, 249) 19.91%,
-      rgb(255, 255, 255) 30.81%,
-      rgb(61, 243, 229) 64.52%
-    );
-    font-size: 90px;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 110%;
-    margin-bottom: 20px;
+      font-size:72px
   }
-  
+}
+
+@media(max-width: 1024px) {
+  .heading {
+      font-size:65px
+  }
+}
+
+@media(max-width: 544px) {
+  .heading {
+      font-size:35px;
+      margin-bottom: 16px
+  }
+}
+
+
+.subheading {
+  color: #adacb6;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: 42px;
+  line-height: 120%;
+  margin-bottom: 140px;
+  max-width: 950px
+}
+
+@media(max-width: 1024px) {
   .subheading {
-    color: rgb(173, 172, 182);
-    font-size: 35px;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 120%;
-    margin-bottom: 140px;
-    max-width: 950px;
+      font-size:24px
   }
-  
+}
+
+@media(max-width: 544px) {
+  .subheading {
+      font-size:20px;
+      margin-bottom: 80px
+  }
+}
