@@ -1,65 +1,147 @@
-.banner{
-  background-color: black !important;
-  height: 100vh !important;
-  display: flex !important;
-  align-items: center !important;
+.banner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.textContent {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease;
+  padding-right: 15px;
+}
+
+.animateText {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .heading {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-  background-image: -o-linear-gradient(linear-gradient(90.04deg,#4650a0 .6%,#64c7b4 22.79%));
-  background-image: linear-gradient(90deg,#fff 3.19%,#3a4ef9 10.49%,#3a4ef9 19.91%,#fff 30.81%,#3df3e5 64.52%);
-  font-size: 90px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,#fff 3%,#3a4ef9 10%,#3df3e5 65%);
+  font-size: 80px;
   font-weight: 700;
-  letter-spacing: -.03em;
-  line-height: 110%;
+  line-height: 1.1;
   margin-bottom: 20px;
-  max-width: 950px
+  max-width: 90%;       /* ✅ keep text inside container */
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
-
-@media(max-width: 1359px) {
-  .heading {
-      font-size:72px
-  }
+/* Tablets & small laptops */
+@media (max-width: 1200px) {
+  .heading { font-size: 65px; }
 }
 
-@media(max-width: 1024px) {
-  .heading {
-      font-size:65px
-  }
+/* iPads / small desktops */
+@media (max-width: 992px) {
+  .heading { font-size: 50px; }
+  .subheading { font-size: 22px; }
 }
 
-@media(max-width: 544px) {
-  .heading {
-      font-size:35px;
-      margin-bottom: 16px
+/* Mobile */
+@media (max-width: 767px) {
+  .textContent, .formWrapper {
+    text-align: center;
+    padding: 0 15px;
   }
+  .heading { 
+    font-size: 32px;   /* ✅ smaller but bold for readability */
+    max-width: 100%;   /* ✅ ensure no overflow */
+  }
+  .subheading { font-size: 18px; }
+  .leadForm { flex-direction: column; }
+  .submitBtn { width: 100%; }
+}
+
+/* Extra small devices (under 400px) */
+@media (max-width: 400px) {
+  .heading { font-size: 26px; }
+  .subheading { font-size: 16px; }
 }
 
 
 .subheading {
   color: #adacb6;
-  font-size: 35px;
-  font-weight: 400;
-  letter-spacing: -.02em;
-  line-height: 42px;
-  line-height: 120%;
-  margin-bottom: 140px;
-  max-width: 950px
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 0;
+  word-wrap: break-word;
 }
 
-@media(max-width: 1024px) {
-  .subheading {
-      font-size:24px
-  }
+.formWrapper {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease;
 }
 
-@media(max-width: 544px) {
-  .subheading {
-      font-size:20px;
-      margin-bottom: 80px
+.animateForm {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.leadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: 2px solid #3a4ef9;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(58, 78, 249, 0.5);
+  border-color: #3df3e5;
+}
+
+.submitBtn {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg,#3a4ef9,#3df3e5);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(58, 78, 249, 0.5);
+}
+
+.errorMsg {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.errorInput {
+  border-color: #ff4d4f;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heading { font-size: 60px; }
+  .subheading { font-size: 24px; }
+}
+
+@media (max-width: 767px) {
+  .textContent, .formWrapper {
+    text-align: center;
+    padding: 0 15px;
   }
+  .heading { font-size: 35px; }
+  .subheading { font-size: 18px; }
+  .leadForm { flex-direction: column; }
+  .submitBtn { width: 100%; }
 }

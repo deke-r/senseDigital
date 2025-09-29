@@ -10,31 +10,33 @@ const SuccessStories = () => {
 
   const stories = [
     {
-      title: "Market disruption",
-      value: "3 🦄",
-      desc: "Unicorns disrupted industries from startup phase",
+      title: "Fresh Ideas",
+      value: "100%",
+      desc: "Driven by creativity and innovation",
     },
     {
-      title: "Scalability at its best",
-      value: "10M+",
-      desc: "Users scaled in just 18 months",
+      title: "Web & App Solutions",
+      value: "Tailored",
+      desc: "Custom-built for every business need",
     },
     {
-      title: "Capital growth",
-      value: "$1.2B",
-      desc: "Raised by the clients",
+      title: "Digital Marketing",
+      value: "Focused",
+      desc: "Strategies designed to grow your brand",
     },
     {
-      title: "Revenue boost",
-      value: "$5M",
-      desc: "First-year revenue boost from zero",
+      title: "Backlink Building",
+      value: "Quality",
+      desc: "Strong SEO foundation from the start",
     },
     {
-      title: "Smart contract success",
-      value: "1M+",
-      desc: "Secure smart contract executions enabled",
-    },
-  ]
+      title: "Our Journey",
+      value: "Beginning",
+      desc: "Passionate team ready to scale with you",
+    }
+    
+  ];
+  
 
   const handlePrev = () => {
     splideRef.current.splide.go("<")

@@ -1,4 +1,4 @@
-import styles from "../../styles/pages/services.module.css"
+
 import { Palette, Image, Type, Layers, Monitor, Smartphone } from "lucide-react"
 
 export default function GraphicDesigningPage() {

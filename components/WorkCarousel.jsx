@@ -7,59 +7,60 @@ import { useState } from "react"
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Startup E-Commerce Site",
     category: "Web Development",
-    description: "A comprehensive e-commerce solution with advanced features including inventory management, payment processing, and analytics dashboard.",
+    description: "A clean, responsive e-commerce website with product catalog, cart, and checkout integration.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    technologies: ["React", "Node.js", "MongoDB"],
     link: "#"
   },
   {
     id: 2,
-    title: "Mobile Banking App",
+    title: "Finance Tracker App",
     category: "App Development",
-    description: "Secure mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management tools.",
+    description: "A simple mobile app to track expenses, budgets, and savings with real-time sync.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React Native", "Firebase", "Node.js", "AWS"],
+    technologies: ["React Native", "Firebase"],
     link: "#"
   },
   {
     id: 3,
-    title: "Brand Identity Design",
+    title: "Creative Logo Design",
     category: "Graphic Design",
-    description: "Complete brand identity package including logo design, color palette, typography, and brand guidelines for a tech startup.",
+    description: "Logo and brand design for a local business, including color scheme and typography.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Adobe Creative Suite", "Figma", "Illustrator"],
+    technologies: ["Figma", "Illustrator"],
     link: "#"
   },
   {
     id: 4,
-    title: "Digital Marketing Campaign",
+    title: "Social Media Campaign",
     category: "Digital Marketing",
-    description: "Multi-channel digital marketing campaign that increased brand awareness by 250% and generated 500+ qualified leads.",
+    description: "Targeted ad campaign that boosted engagement and generated quality leads.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Google Ads", "Facebook Ads", "SEO", "Analytics"],
+    technologies: ["Google Ads", "Facebook Ads", "SEO"],
     link: "#"
   },
   {
     id: 5,
-    title: "SaaS Dashboard",
+    title: "Business Dashboard",
     category: "Web App Development",
-    description: "Enterprise-grade SaaS dashboard with real-time analytics, user management, and customizable reporting features.",
+    description: "Lightweight dashboard for tracking sales, customers, and reports in real time.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
+    technologies: ["Next.js", "Node.js", "PostgreSQL"],
     link: "#"
   },
   {
     id: 6,
-    title: "Restaurant Website",
+    title: "Restaurant Landing Page",
     category: "Website Development",
-    description: "Modern, responsive restaurant website with online ordering system, menu management, and reservation booking functionality.",
+    description: "Modern website with menu showcase, table booking, and online order requests.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "Tailwind CSS", "Stripe", "MongoDB"],
+    technologies: ["Next.js", "Tailwind CSS"],
     link: "#"
   }
-]
+];
+
 
 export default function WorkCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)

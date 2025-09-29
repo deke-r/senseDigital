@@ -1,7 +1,6 @@
 /* styles/components/work-carousel.module.css */
 .workCarouselSection {
   padding: 100px 0;
-  background: var(--dark-bg);
   color: #ffffff;
 }
 

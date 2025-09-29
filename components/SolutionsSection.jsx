@@ -1,39 +1,39 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "../styles/components/SolutionsSection.module.css";
-
 
 const solutions = [
   {
     id: "01",
-    title: "DApps development",
-    desc: "From gamified user engagement solutions to complex DeFi platforms, we build blockchain-powered dApps that boast increased security, reliability, and performance.",
-    link: "/services/dapp-development-company/",
+    title: "Digital Marketing",
+    desc: "We craft data-driven marketing campaigns that build awareness, engage audiences, and convert leads into loyal customers.",
+    link: "/services/digital-marketing",
   },
   {
     id: "02",
-    title: "Cryptocurrency exchanges development",
-    desc: "PixelPlex builds centralized and decentralized cryptocurrency exchanges that cater to both professional and novice traders, ensuring an intuitive UX and increased security.",
-    link: "/services/cryptocurrency-exchange-development-company/",
+    title: "Web Development",
+    desc: "From sleek business websites to complex enterprise platforms, Metasense delivers responsive, secure, and scalable web solutions.",
+    link: "/services/web-development",
   },
   {
     id: "03",
-    title: "Smart contracts development",
-    desc: "To help you automate processes and reduce operational costs, our team crafts self-executing smart contracts on multiple blockchain platforms.",
-    link: "/services/smart-contracts-development-company/",
+    title: "Mobile App Development",
+    desc: "We design and develop user-friendly mobile apps that combine functionality, performance, and smooth user experiences.",
+    link: "/services/mobile-app-development",
   },
   {
     id: "04",
-    title: "Web app development",
-    desc: "Our skilled web team provides comprehensive end-to-end web development services, creating both consumer-centric websites and enterprise-grade solutions tailored to meet your specific needs.",
-    link: "/services/web-development-company/",
+    title: "SEO & Backlinks",
+    desc: "Boost your visibility with our SEO strategies and high-quality backlinks, helping you rank higher and attract more traffic.",
+    link: "/services/seo-backlinks",
   },
   {
     id: "05",
-    title: "Mobile app development",
-    desc: "To expand your user base and boost productivity, we develop customized mobile apps that offer a seamless user experience and robust scalability.",
-    link: "/services/mobile-app-development-company/",
+    title: "Branding & Strategy",
+    desc: "Metasense helps you stand out with compelling brand identities and strategies that communicate your values and vision.",
+    link: "/services/branding-strategy",
   },
 ];
 
@@ -47,21 +47,36 @@ const SolutionsSection = () => {
   return (
     <section className={styles.solutionsSection}>
       <div className="container">
-        <h2 className={styles.title}>Solutions we deliver</h2>
-        <p className={styles.desc}>
-          Leveraging advanced technologies, such as blockchain, artificial
-          intelligence, and big data, our team delivers comprehensive solutions
-          that digitize your processes, streamline workflows, and unlock new
-          revenue streams.
-        </p>
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          Solutions we deliver
+        </motion.h2>
+
+        <motion.p
+          className={styles.desc}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          At Metasense, we combine creativity and technology to deliver
+          solutions that empower businesses, strengthen their digital presence,
+          and drive measurable results.
+        </motion.p>
 
         <div className={`accordion ${styles.accordionCustom}`}>
           {solutions.map((item, index) => (
-            <div
-              className={`accordion-item ${styles.accordionItem}`}
+            <motion.div
               key={index}
+              className={`accordion-item ${styles.accordionItem}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 }}
             >
-              <h2 className="accordion-header" id={`heading${index}`}>
+              <h2 className="accordion-header">
                 <button
                   className={`accordion-button ${
                     activeIndex === index ? "" : "collapsed"
@@ -81,11 +96,11 @@ const SolutionsSection = () => {
                 <div className={`accordion-body ${styles.accordionBody}`}>
                   <p>{item.desc}</p>
                   <a className={styles.learnMore} href={item.link}>
-                    Learn more
+                    Learn more →
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

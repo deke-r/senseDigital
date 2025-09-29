@@ -1,30 +1,63 @@
-.ctaLink {
-  background-color: var(--primary-color);
-  color: #fff !important;
-  padding: 8px 18px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.ctaLink:hover {
-  background-color: #fff;
-  color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color);
-}
-
-
-.navLink{
+.navLink {
   color: black !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   padding-inline: 20px;
+  transition: color 0.3s;
 }
 
-.dropdown-menu{
-  font-weight: 600 !important;
+.navLink:hover {
+  color: var(--primary-color) !important;
 }
 
+.dropdownMenu {
+  border-radius: 0 !important;
+  min-width: 280px;
+  animation: fadeIn 0.3s ease forwards;
+}
 
-.navbarTogglerIcon{
-  background-image: url('/img/navbaricon.png') !important;
+.dropdownItemWrapper {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.3s forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+.dropdownContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-top: 0.1rem;
+  color: #134377;
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.dropdown-item:hover .title {
+  color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
