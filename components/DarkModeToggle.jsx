@@ -9,7 +9,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className={`btn btn-link nav-link ${styles.toggleButton}`}
+      className={`btn btn-link nav-link  ${styles.toggleButton}`}
       aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
     >

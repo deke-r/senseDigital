@@ -38,11 +38,7 @@ const solutions = [
 ];
 
 const SolutionsSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <section className={styles.solutionsSection}>
@@ -67,41 +63,40 @@ const SolutionsSection = () => {
           and drive measurable results.
         </motion.p>
 
-        <div className={`accordion ${styles.accordionCustom}`}>
-          {solutions.map((item, index) => (
-            <motion.div
-              key={index}
-              className={`accordion-item ${styles.accordionItem}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-            >
-              <h2 className="accordion-header">
-                <button
-                  className={`accordion-button ${
-                    activeIndex === index ? "" : "collapsed"
-                  } ${styles.accordionBtn}`}
-                  type="button"
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <span className={styles.accordionNumber}>{item.id}</span>
-                  {item.title}
-                </button>
-              </h2>
-              <div
-                className={`accordion-collapse collapse ${
-                  activeIndex === index ? "show" : ""
+        <div className={styles.splitLayout}>
+          {/* Left side: list of services */}
+          <ul className={styles.servicesList}>
+            {solutions.map((item, index) => (
+              <li
+                key={index}
+                className={`${styles.serviceItem} ${
+                  activeIndex === index ? styles.active : ""
                 }`}
+                onClick={() => setActiveIndex(index)}
               >
-                <div className={`accordion-body ${styles.accordionBody}`}>
-                  <p>{item.desc}</p>
-                  <a className={styles.learnMore} href={item.link}>
-                    Learn more →
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                <span className={styles.serviceNumber}>{item.id}</span>
+                {item.title}
+              </li>
+            ))}
+          </ul>
+
+          {/* Right side: details of selected service */}
+          <motion.div
+            key={activeIndex}
+            className={styles.serviceDetails}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <h3>{solutions[activeIndex].title}</h3>
+            <p>{solutions[activeIndex].desc}</p>
+            <a
+              href={solutions[activeIndex].link}
+              className={styles.learnMore}
+            >
+              Learn more →
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

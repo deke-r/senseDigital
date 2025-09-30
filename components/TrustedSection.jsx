@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/components/TrustedSection.module.css";
 
 const slides = [
@@ -15,7 +16,8 @@ const slides = [
     logo: "https://pixelplex.io/next/images/clients-and-companies/qtum.png",
     img: "https://pixelplex.io/next/images/clients-and-companies/patrick-dai.jpg",
     video: "https://s3.amazonaws.com/static.pixelplex.io/startups_video.mp4",
-    banner: "https://pixelplex.io/next/images/home-page/trusted-by-companies/supporting-startups.png",
+    banner:
+      "https://pixelplex.io/next/images/home-page/trusted-by-companies/supporting-startups.png",
   },
   {
     title: "Scaling Small Businesses",
@@ -28,7 +30,8 @@ const slides = [
     logo: "https://pixelplex.io/next/images/clients-and-companies/footballnet-black-logo.png",
     img: "https://pixelplex.io/next/images/clients-and-companies/Michael-Watford.png",
     video: "https://s3.amazonaws.com/static.pixelplex.io/smbs_vide.mp4",
-    banner: "https://pixelplex.io/next/images/home-page/trusted-by-companies/scaling-sm-bs.png",
+    banner:
+      "https://pixelplex.io/next/images/home-page/trusted-by-companies/scaling-sm-bs.png",
   },
   {
     title: "Empowering Brands",
@@ -41,10 +44,10 @@ const slides = [
     logo: "https://pixelplex.io/next/images/clients-and-companies/swisscom-black-logo.png",
     img: "https://pixelplex.io/next/images/clients-and-companies/kamal-youssefi.png",
     video: "https://s3.amazonaws.com/static.pixelplex.io/enterprises_video.mp4",
-    banner: "https://pixelplex.io/next/images/home-page/trusted-by-companies/enterprises.png",
+    banner:
+      "https://pixelplex.io/next/images/home-page/trusted-by-companies/enterprises.png",
   },
 ];
-
 
 const TrustedSection = () => {
   const [active, setActive] = React.useState(0);
@@ -56,6 +59,7 @@ const TrustedSection = () => {
           Trusted by startups, small businesses, and enterprises
         </h2>
 
+        {/* Navigation Buttons */}
         <div className={styles.sliderNav}>
           {slides.map((slide, index) => (
             <button
@@ -70,34 +74,56 @@ const TrustedSection = () => {
           ))}
         </div>
 
-        <div className={styles.slide}>
-          <div className={styles.slideContent}>
-            <h3>{slides[active].title}</h3>
-            <p>{slides[active].description}</p>
-            <div className={styles.testimonial}>
-              <img src={slides[active].logo} alt="Company Logo" />
-              <p>{slides[active].testimonial}</p>
-              {/* <div className={styles.person}>
-                <img src={slides[active].img} alt={slides[active].name} />
-                <div>
-                  <p>{slides[active].name}</p>
-                  <p>{slides[active].role}</p>
-                </div>
-              </div> */}
-            </div>
-          </div>
-          <div className={styles.slideMedia}>
-  <video
-    src={slides[active].video}
-    autoPlay
-    loop
-    playsInline
-    muted
-    className={styles.video}
-  />
-</div>
+        {/* Slide Content */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            className={styles.slide}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className={styles.slideContent}>
+              <h3>{slides[active].title}</h3>
+              <p>{slides[active].description}</p>
 
-        </div>
+              <div className={styles.testimonialCard}>
+                <img
+                  src={slides[active].logo}
+                  alt="Company Logo"
+                  className={styles.companyLogo}
+                />
+                <blockquote>{slides[active].testimonial}</blockquote>
+                <div className={styles.person}>
+                  <img
+                    src={slides[active].img}
+                    alt={slides[active].name}
+                  />
+                  <div>
+                    <p className={styles.personName}>
+                      {slides[active].name}
+                    </p>
+                    <p className={styles.personRole}>
+                      {slides[active].role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.slideMedia}>
+              <video
+                src={slides[active].video}
+                autoPlay
+                loop
+                playsInline
+                muted
+                className={styles.video}
+              />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

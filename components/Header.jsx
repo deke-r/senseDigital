@@ -25,47 +25,47 @@ const dropdownItems = {
       title: "Google Ads Management",
       desc: "Maximize ROI with targeted Google campaigns.",
       icon: <BsGraphUp />,
-      link: "/google-ads-management-services",
+      link: "/services/google-ads-management",
     },
     {
       title: "LinkedIn Ads Management",
       desc: "Generate leads with precise LinkedIn targeting.",
       icon: <BsLinkedin />,
-      link: "/linkedin-ads-management-services",
+      link: "/services/linkedin-ads-management",
     },
     {
       title: "Facebook Ads Marketing",
       desc: "Boost engagement with Facebook campaigns.",
       icon: <BsFacebook />,
-      link: "/facebook-ads-management-services",
+      link: "/services/facebook-ads-management",
     },
     {
       title: "Instagram Ads Management",
       desc: "Reach your audience effectively on Instagram.",
       icon: <BsInstagram />,
-      link: "/instagram-ads-management-services",
+      link: "/services/instagram-ads-management",
     },
   ],
   seo: [
-    { title: "On-Page SEO", desc: "Optimize content & structure for search engines.", icon: <BsFileText />, link: "/on-page-seo-services" },
-    { title: "Off-Page SEO", desc: "Build authority with backlinks & outreach.", icon: <BsGraphUp />, link: "/off-page-seo-services" },
-    { title: "E-Commerce SEO", desc: "Boost your online store’s visibility.", icon: <BsShop />, link: "/e-commerce-seo-services" },
-    { title: "Mobile SEO", desc: "Optimize for mobile-first indexing.", icon: <BsPhone />, link: "/mobile-seo-services" },
-    { title: "SEO Outsourcing", desc: "Delegate SEO tasks to experts.", icon: <BsEnvelope />, link: "/search-engine-optimization-outsourcing-seo-services" },
-    { title: "Local SEO", desc: "Get found in local search results.", icon: <BsGraphUp />, link: "/local-seo-services" },
+    { title: "On-Page SEO", desc: "Optimize content & structure for search engines.", icon: <BsFileText />, link: "/services/on-page-seo" },
+    { title: "Off-Page SEO", desc: "Build authority with backlinks & outreach.", icon: <BsGraphUp />, link: "/services/off-page-seo" },
+    { title: "E-Commerce SEO", desc: "Boost your online store’s visibility.", icon: <BsShop />, link: "/services/e-commerce-seo" },
+    { title: "Mobile SEO", desc: "Optimize for mobile-first indexing.", icon: <BsPhone />, link: "/services/mobile-seo" },
+    { title: "SEO Outsourcing", desc: "Delegate SEO tasks to experts.", icon: <BsEnvelope />, link: "/services/search-engine-optimization-outsourcing-seo" },
+    { title: "Local SEO", desc: "Get found in local search results.", icon: <BsGraphUp />, link: "/services/local-seo" },
   ],
   smo: [
-    { title: "Social Media Optimization", desc: "Increase engagement & followers.", icon: <BsGraphUp />, link: "/social-media-optimization-services" },
-    { title: "Content Marketing", desc: "Create valuable content to attract users.", icon: <BsFileText />, link: "/content-marketing-services" },
-    { title: "Digital Marketing", desc: "Holistic online marketing strategies.", icon: <BsGraphUp />, link: "/digital-marketing-services" },
-    { title: "Online Reputation Management", desc: "Maintain a positive brand image.", icon: <BsEnvelope />, link: "/online-reputation-management-services" },
-    { title: "Blog Management", desc: "Plan and manage your blog content.", icon: <BsFileText />, link: "/blog-management-services" },
-    { title: "Influencer Marketing", desc: "Collaborate with influencers effectively.", icon: <BsInstagram />, link: "/influencer-marketing-services" },
+    { title: "Social Media Optimization", desc: "Increase engagement & followers.", icon: <BsGraphUp />, link: "/services/social-media-optimization" },
+    { title: "Content Marketing", desc: "Create valuable content to attract users.", icon: <BsFileText />, link: "/services/content-marketing" },
+    { title: "Digital Marketing", desc: "Holistic online marketing strategies.", icon: <BsGraphUp />, link: "/services/digital-marketing" },
+    { title: "Online Reputation Management", desc: "Maintain a positive brand image.", icon: <BsEnvelope />, link: "/services/online-reputation-management" },
+    { title: "Blog Management", desc: "Plan and manage your blog content.", icon: <BsFileText />, link: "/blog-management" },
+    { title: "Influencer Marketing", desc: "Collaborate with influencers effectively.", icon: <BsInstagram />, link: "/services/influencer-marketing" },
   ],
   development: [
-    { title: "Web Development", desc: "Build responsive & modern websites.", icon: <BsLaptop />, link: "/website-development-services" },
-    { title: "Software Development", desc: "Custom software solutions.", icon: <BsCodeSlash />, link: "/software-development-services" },
-    { title: "App Development", desc: "iOS & Android mobile applications.", icon: <BsPhoneFill />, link: "/app-development-services" },
+    { title: "Web Development", desc: "Build responsive & modern websites.", icon: <BsLaptop />, link: "/services/website-development" },
+    { title: "Software Development", desc: "Custom software solutions.", icon: <BsCodeSlash />, link: "/services/software-development" },
+    { title: "App Development", desc: "iOS & Android mobile applications.", icon: <BsPhoneFill />, link: "/services/app-development" },
   ],
 };
 
@@ -96,7 +96,7 @@ export default function Header() {
         <div className="container">
           {/* Logo */}
           <Link href="/" className={`navbar-brand ${styles.brand}`}>
-            <Image src="/logo.svg" alt="Logo" width={116} height={26} priority />
+            <Image src="/img/logo.png" alt="Logo" width={30} height={30} priority />
           </Link>
 
           {/* Toggler */}
@@ -117,7 +117,7 @@ export default function Header() {
             <ul className="navbar-nav ms-auto bottom_header">
               {/* Digital Marketing */}
               <li className="nav-item">
-                <Link href="/digital-marketing-services" className={`nav-link ${styles.navLink}`}>
+                <Link href="/services/digital-marketing" className={`nav-link ${styles.navLink}`}>
                   Digital Marketing
                 </Link>
               </li>
@@ -180,12 +180,12 @@ export default function Header() {
 
               {/* Others */}
               <li className="nav-item">
-                <Link href="/graphic-designing-services" className={`nav-link ${styles.navLink}`}>
+                <Link href="/services/graphic-designing" className={`nav-link ${styles.navLink}`}>
                   Graphic Design
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/website-designing-services" className={`nav-link ${styles.navLink}`}>
+                <Link href="/website-designing" className={`nav-link ${styles.navLink}`}>
                   Website Designing
                 </Link>
               </li>
