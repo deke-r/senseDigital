@@ -1,142 +1,226 @@
-import styles from "../../../styles/pages/services.module.css"
-import { Globe, Code, ShoppingCart, Database, Search, Shield } from "lucide-react"
+import { Globe, Palette, Smartphone, Rocket, TrendingUp, Shield, ArrowRight, Check } from "lucide-react"
+import styles from "./website.module.css"
 
 export default function WebsiteDevelopmentPage() {
   return (
-    <main className="container my-5">
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <h1 className={styles.pageTitle}>Website Development</h1>
-            <p className={styles.heroSubtitle}>
-              We build high-performance, secure, and scalable websites that provide an exceptional user experience 
-              and drive business growth in the digital marketplace.
-            </p>
-            <div className={styles.heroActions}>
-              <button className={styles.primaryBtn}>Get Started</button>
-              <button className={styles.secondaryBtn}>View Portfolio</button>
+    <main className={styles.page}>
+      {/* Hero */}
+      <section className={styles.hero}>
+        <div className="container">
+          <div className={styles.heroGrid}>
+            <div className={styles.heroText}>
+              <h1 className={styles.title}>
+                Beautiful Websites That <span className={styles.highlight}>Convert Visitors</span> Into Customers
+              </h1>
+              <p className={styles.description}>
+                We design and develop stunning, high-performance websites that captivate your audience and drive
+                business growth. From landing pages to complex corporate sites, we bring your vision to life.
+              </p>
+              <div className={styles.stats}>
+                <div className={styles.statItem}>
+                  <div className={styles.statNumber}>500+</div>
+                  <div className={styles.statLabel}>Websites Launched</div>
+                </div>
+                <div className={styles.statItem}>
+                  <div className={styles.statNumber}>99%</div>
+                  <div className={styles.statLabel}>Client Satisfaction</div>
+                </div>
+                <div className={styles.statItem}>
+                  <div className={styles.statNumber}>2 Weeks</div>
+                  <div className={styles.statLabel}>Average Delivery</div>
+                </div>
+              </div>
+              <div className={styles.actions}>
+                <button className={styles.primaryBtn}>
+                  Start Your Website
+                  <ArrowRight size={18} />
+                </button>
+                <button className={styles.secondaryBtn}>View Portfolio</button>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-6">
-            <img
-              src="/placeholder.svg?height=400&width=500"
-              alt="Website Development"
-              className={`img-fluid ${styles.heroImage}`}
-            />
+            <div className={styles.heroImage}>
+              <div className={styles.browserMockup}>
+                <div className={styles.browserBar}>
+                  <div className={styles.browserDots}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div className={styles.browserContent}>
+                  <div className={styles.mockupSection}></div>
+                  <div className={styles.mockupGrid}>
+                    <div className={styles.mockupCard}></div>
+                    <div className={styles.mockupCard}></div>
+                    <div className={styles.mockupCard}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className={styles.servicesSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Website Development Services</h2>
-            <p className={styles.sectionSubtitle}>
-              From simple websites to complex web applications, we deliver solutions that work.
-            </p>
+      {/* Services */}
+      <section className={styles.services}>
+        <div className="container">
+          <div className={styles.servicesHeader}>
+            <h2>Complete Website Solutions</h2>
+            <p>Everything you need to establish a powerful online presence</p>
           </div>
-        </div>
-        
-        <div className="row g-4">
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Globe className={styles.serviceIcon} />
+          <div className={styles.servicesGrid}>
+            <div className={styles.card}>
+              <Globe className={styles.icon} size={32} />
               <h3>Custom Website Design</h3>
-              <p>Unique, responsive websites tailored to your brand and business requirements.</p>
+              <p>Unique, brand-focused designs that stand out and engage your target audience effectively.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> Responsive design
+                </li>
+                <li>
+                  <Check size={16} /> Brand consistency
+                </li>
+                <li>
+                  <Check size={16} /> Modern aesthetics
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <ShoppingCart className={styles.serviceIcon} />
-              <h3>E-commerce Solutions</h3>
-              <p>Online stores with secure payment processing and inventory management systems.</p>
+
+            <div className={styles.card}>
+              <Palette className={styles.icon} size={32} />
+              <h3>Landing Pages</h3>
+              <p>High-converting landing pages optimized for campaigns, products, and lead generation.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> Conversion focused
+                </li>
+                <li>
+                  <Check size={16} /> A/B testing ready
+                </li>
+                <li>
+                  <Check size={16} /> Fast loading
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Code className={styles.serviceIcon} />
-              <h3>Web Applications</h3>
-              <p>Dynamic web applications with advanced functionality and user management.</p>
+
+            <div className={styles.card}>
+              <Smartphone className={styles.icon} size={32} />
+              <h3>E-Commerce Websites</h3>
+              <p>Complete online stores with secure payments, inventory management, and order tracking.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> Payment integration
+                </li>
+                <li>
+                  <Check size={16} /> Product management
+                </li>
+                <li>
+                  <Check size={16} /> Shopping cart
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Database className={styles.serviceIcon} />
-              <h3>CMS Development</h3>
-              <p>Content management systems for easy website updates and maintenance.</p>
+
+            <div className={styles.card}>
+              <Rocket className={styles.icon} size={32} />
+              <h3>Corporate Websites</h3>
+              <p>Professional business websites that build credibility and showcase your services.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> Professional design
+                </li>
+                <li>
+                  <Check size={16} /> Content management
+                </li>
+                <li>
+                  <Check size={16} /> Multi-page structure
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Search className={styles.serviceIcon} />
+
+            <div className={styles.card}>
+              <TrendingUp className={styles.icon} size={32} />
               <h3>SEO Optimization</h3>
-              <p>Search engine optimization to improve your website's visibility and rankings.</p>
+              <p>Built-in SEO best practices to help your website rank higher in search results.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> On-page SEO
+                </li>
+                <li>
+                  <Check size={16} /> Meta optimization
+                </li>
+                <li>
+                  <Check size={16} /> Performance tuning
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Shield className={styles.serviceIcon} />
-              <h3>Security & Maintenance</h3>
-              <p>Ongoing security updates, backups, and maintenance to keep your site secure.</p>
+
+            <div className={styles.card}>
+              <Shield className={styles.icon} size={32} />
+              <h3>Maintenance & Support</h3>
+              <p>Ongoing updates, security patches, and technical support to keep your site running.</p>
+              <ul className={styles.list}>
+                <li>
+                  <Check size={16} /> Regular updates
+                </li>
+                <li>
+                  <Check size={16} /> Security monitoring
+                </li>
+                <li>
+                  <Check size={16} /> 24/7 support
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className={styles.processSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Development Process</h2>
-            <p className={styles.sectionSubtitle}>
-              A systematic approach that ensures quality and timely delivery.
-            </p>
-          </div>
-        </div>
-        
-        <div className="row">
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>01</div>
-              <h4>Requirements Analysis</h4>
-              <p>We analyze your business needs and define the project scope and objectives.</p>
+      {/* Process */}
+      <section className={styles.process}>
+        <div className="container">
+          <h2 className={styles.processTitle}>Simple, Transparent Process</h2>
+          <div className={styles.timeline}>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineIcon}>1</div>
+              <div className={styles.timelineContent}>
+                <h3>Consultation</h3>
+                <p>We discuss your goals, target audience, and design preferences to create a clear project brief.</p>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>02</div>
-              <h4>Design & Planning</h4>
-              <p>We create wireframes, mockups, and plan the technical architecture.</p>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineIcon}>2</div>
+              <div className={styles.timelineContent}>
+                <h3>Design</h3>
+                <p>Our designers create mockups and prototypes for your review and feedback.</p>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>03</div>
-              <h4>Development & Testing</h4>
-              <p>We build your website using modern technologies and rigorous testing.</p>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineIcon}>3</div>
+              <div className={styles.timelineContent}>
+                <h3>Development</h3>
+                <p>We build your website with clean code, ensuring speed, security, and responsiveness.</p>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>04</div>
-              <h4>Launch & Support</h4>
-              <p>We deploy your website and provide ongoing support and maintenance.</p>
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineIcon}>4</div>
+              <div className={styles.timelineContent}>
+                <h3>Launch</h3>
+                <p>We deploy your website and provide training on how to manage and update content.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className="row">
-          <div className="col-12 text-center">
-            <h2 className={styles.ctaTitle}>Ready to Build Your Website?</h2>
-            <p className={styles.ctaSubtitle}>
-              Let's create a website that represents your brand and drives your business forward.
-            </p>
-            <button className={styles.ctaButton}>Start Your Project</button>
+      {/* CTA */}
+      <section className={styles.cta}>
+        <div className="container">
+          <div className={styles.ctaContent}>
+            <h2>Ready to Launch Your Website?</h2>
+            <p>Let's create a website that represents your brand and drives results.</p>
+            <button className={styles.ctaBtn}>
+              Get Your Free Quote
+              <ArrowRight size={20} />
+            </button>
           </div>
         </div>
       </section>

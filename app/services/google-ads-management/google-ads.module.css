@@ -1,0 +1,588 @@
+.container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] .container {
+  background: #0a0a0a;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+  padding: 8rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced hero dark mode gradient */
+[data-bs-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Enhanced overlay for dark mode */
+[data-bs-theme="dark"] .hero::before {
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.heroContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroText {
+  color: white;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced badge for dark mode */
+[data-bs-theme="dark"] .badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  color: #fbbc04;
+  display: block;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.primaryButton {
+  background: #fbbc04;
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.5rem 2rem;
+  height: auto;
+}
+
+.primaryButton:hover {
+  background: #f9ab00;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.5rem 2rem;
+  height: auto;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fbbc04;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adCard {
+  background: #1a1a1a;
+  box-shadow: 0.20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+
+.adHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #5f6368;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adHeader {
+  color: #cccccc;
+}
+
+.googleLogo {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #4285f4, #34a853, #fbbc04, #ea4335);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.adContent h3 {
+  color: #1a0dab;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adContent h3 {
+  color: #4285f4;
+}
+
+.adContent p {
+  color: #4d5156;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adContent p {
+  color: #cccccc;
+}
+
+.adUrl {
+  color: #006621;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adUrl {
+  color: #34a853;
+}
+
+.adMetrics {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8eaed;
+  transition: border-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .adMetrics {
+  border-top-color: #404040;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #34a853;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.services {
+  padding: 6rem 2rem;
+  background: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .services {
+  background: #0f0f0f;
+}
+
+.sectionHeader {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .sectionTitle {
+  color: #4285f4;
+}
+
+.sectionDescription {
+  font-size: 1.125rem;
+  color: #5f6368;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .sectionDescription {
+  color: #cccccc;
+}
+
+.servicesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  padding: 2.5rem;
+  background: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
+
+[data-bs-theme="dark"] .serviceCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.serviceCard:hover {
+  border-color: #1a73e8;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(26, 115, 232, 0.15);
+}
+
+[data-bs-theme="dark"] .serviceCard:hover {
+  border-color: #4285f4;
+  box-shadow: 0 12px 24px rgba(66, 133, 244, 0.2);
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+}
+
+[data-bs-theme="dark"] .serviceIcon {
+  color: #4285f4;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceTitle {
+  color: #ffffff;
+}
+
+.serviceDescription {
+  color: #5f6368;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceDescription {
+  color: #cccccc;
+}
+
+.process {
+  padding: 6rem 2rem;
+  background: white;
+  transition: background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .process {
+  background: #0f0f0f;
+}
+
+.processTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processTitle {
+  color: #4285f4;
+}
+
+.processSteps {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.processStep {
+  text-align: center;
+}
+
+.stepNumber {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1a73e8, #4285f4);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 auto 1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepTitle {
+  color: #ffffff;
+}
+
+.stepDescription {
+  color: #5f6368;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepDescription {
+  color: #cccccc;
+}
+
+.benefits {
+  padding: 6rem 2rem;
+  background: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .benefits {
+  background: #0f0f0f;
+}
+
+.benefitsTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 3rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .benefitsTitle {
+  color: #4285f4;
+}
+
+.benefitsList {
+  display: grid;
+  gap: 2rem;
+}
+
+.benefit {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .benefit {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.benefit:hover {
+  border-color: #1a73e8;
+  transform: translateX(8px);
+}
+
+[data-bs-theme="dark"] .benefit:hover {
+  border-color: #4285f4;
+}
+
+.benefitIcon {
+  width: 32px;
+  height: 32px;
+  color: #34a853;
+
+  flex-shrink: 0;
+}
+
+.benefitTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .benefitTitle {
+  color: #ffffff;
+}
+
+.benefitDescription {
+  color: #5f6368;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .benefitDescription {
+  color: #cccccc;
+}
+
+.cta {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+}
+
+/* Enhanced CTA background for dark mode */
+[data-bs-theme="dark"] .cta {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.ctaIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 2rem;
+  color: #fbbc04;
+
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ctaDescription {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  background: #fbbc04;
+  color: #1a73e8;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.5rem 2.5rem;
+  height: auto;
+}
+
+.ctaButton:hover {
+  background: #f9ab00;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}

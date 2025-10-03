@@ -1,0 +1,335 @@
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] .container {
+  background: #0a0a0a;
+}
+
+.hero {
+  position: relative;
+  padding: 8rem 1.5rem 6rem;
+  background: linear-gradient(135deg, #1877f2, #0c63d4);
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  opacity: 0.1;
+}
+
+.fbIcon {
+  color: white;
+}
+
+.heroContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.heroCta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  padding: 1.25rem 2.5rem;
+  background: white;
+  color: #1877f2;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.metrics {
+  max-width: 1400px;
+  margin: -3rem auto 0;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.metricCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .metricCard {
+  background: #2a2a2a;
+}
+
+.metricValue {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1877f2;
+  margin-bottom: 0.5rem;
+}
+
+.metricLabel {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .metricLabel {
+  color: #cccccc;
+}
+
+.features {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .sectionTitle {
+  color: #ffffff;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: #f9fafb;
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+[data-bs-theme="dark"] .featureCard {
+  background: #2a2a2a;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(24, 119, 242, 0.15);
+  border-color: #1877f2;
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #1877f2, #0c63d4);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .featureTitle {
+  color: #ffffff;
+}
+
+.featureDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .featureDescription {
+  color: #cccccc;
+}
+
+[data-bs-theme="dark"] .process {
+  background: #0a0a0a;
+}
+
+.process {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.processStep {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1877f2, #0c63d4);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 30px rgba(24, 119, 242, 0.3);
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepTitle {
+  color: #ffffff;
+}
+
+.stepDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepDescription {
+  color: #cccccc;
+}
+
+.cta {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1877f2, #0c63d4);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ctaDescription {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1.5rem 3.5rem;
+  background: white;
+  color: #1877f2;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}

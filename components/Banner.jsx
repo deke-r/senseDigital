@@ -1,22 +1,27 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import styles from "../styles/components/banner.module.css";
+"use client"
+import { useEffect, useState } from "react"
+import { useForm } from "react-hook-form"
+import styles from "../styles/components/Banner.module.css"
 
 const Banner = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const [animateText, setAnimateText] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm()
+  const [animateText, setAnimateText] = useState(false)
 
   useEffect(() => {
-    const timer = setTimeout(() => setAnimateText(true), 200);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setAnimateText(true), 200)
+    return () => clearTimeout(timer)
+  }, [])
 
   const onSubmit = (data) => {
-    console.log("Lead submitted:", data);
-    alert(`Thank you! We will contact you at ${data.mobile}`);
-    reset();
-  };
+    console.log("Lead submitted:", data)
+    alert(`Thank you! We will contact you at ${data.mobile}`)
+    reset()
+  }
 
   return (
     <section className={styles.banner}>
@@ -24,9 +29,7 @@ const Banner = () => {
         <div className="row align-items-center">
           {/* Left Text */}
           <div className={`col-md-8  ${styles.textContent} ${animateText ? styles.animateText : ""}`}>
-            <h1 className={styles.heading}>
-              Digital Marketing, Web & App Development
-            </h1>
+            <h1 className={styles.heading}>Digital Marketing, Web & App Development</h1>
             <p className={styles.subheading}>
               We grow your brand with smart marketing, powerful apps, and quality backlinks.
             </p>
@@ -56,7 +59,7 @@ const Banner = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

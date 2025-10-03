@@ -1,142 +1,155 @@
-
-import { Palette, Image, Type, Layers, Monitor, Smartphone } from "lucide-react"
+import { Palette, Layers, Sparkles, Pen, ImageIcon, Layout } from "lucide-react"
+import styles from "./graphic-designing.module.css"
 
 export default function GraphicDesigningPage() {
   return (
-    <main className="container my-5">
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <h1 className={styles.pageTitle}>Graphic Designing</h1>
-            <p className={styles.heroSubtitle}>
-              We craft visually stunning and impactful graphic designs that resonate with your audience and elevate your
-              brand presence across all platforms.
-            </p>
-            <div className={styles.heroActions}>
-              <button className={styles.primaryBtn}>Get Started</button>
-              <button className={styles.secondaryBtn}>View Portfolio</button>
+    <main className={styles.page}>
+      {/* Hero Section with Creative Gradient */}
+      <section className={styles.hero}>
+        <div className={styles.heroGradient}></div>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <div className={styles.heroText}>
+              <span className={styles.badge}>Creative Design Studio</span>
+              <h1 className={styles.heroTitle}>
+                Graphic Designing That <span className={styles.highlight}>Captivates</span>
+              </h1>
+              <p className={styles.heroSubtitle}>
+                Transform your brand vision into stunning visual experiences. From logos to complete brand identities,
+                we craft designs that leave lasting impressions.
+              </p>
+              <div className={styles.heroActions}>
+                <button className={styles.primaryBtn}>Start Your Project</button>
+                <button className={styles.secondaryBtn}>View Portfolio</button>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-6">
-            <img
-              src="/placeholder.svg?height=400&width=500"
-              alt="Graphic Designing"
-              className={`img-fluid ${styles.heroImage}`}
-            />
+            <div className={styles.heroVisual}>
+              <div className={styles.designCard}>
+                <Palette className={styles.floatingIcon} />
+              </div>
+              <div className={styles.designCard}>
+                <Sparkles className={styles.floatingIcon} />
+              </div>
+              <div className={styles.designCard}>
+                <Pen className={styles.floatingIcon} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className={styles.servicesSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Graphic Design Services</h2>
-            <p className={styles.sectionSubtitle}>
-              Creative design solutions that make your brand stand out
-            </p>
+      {/* Services Grid */}
+      <section className={styles.services}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Design Services</h2>
+            <p className={styles.sectionSubtitle}>Comprehensive creative solutions for your brand</p>
           </div>
-        </div>
-        
-        <div className="row g-4">
-          <div className="col-lg-4 col-md-6">
+
+          <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
-              <Palette className={styles.serviceIcon} />
-              <h3>Brand Identity Design</h3>
-              <p>Complete brand identity packages including logos, color schemes, and brand guidelines.</p>
+              <div className={styles.serviceIcon}>
+                <Palette />
+              </div>
+              <h3>Brand Identity</h3>
+              <p>
+                Complete brand identity packages including logos, color palettes, and brand guidelines that define your
+                unique presence.
+              </p>
+              <ul className={styles.serviceList}>
+                <li>Logo Design</li>
+                <li>Brand Guidelines</li>
+                <li>Color Systems</li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Image className={styles.serviceIcon} />
+              <div className={styles.serviceIcon}>
+                <ImageIcon />
+              </div>
               <h3>Print Design</h3>
-              <p>Professional print materials including brochures, business cards, and marketing collateral.</p>
+              <p>
+                Professional print materials that make a tangible impact, from business cards to large-format displays.
+              </p>
+              <ul className={styles.serviceList}>
+                <li>Business Cards</li>
+                <li>Brochures & Flyers</li>
+                <li>Packaging Design</li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Type className={styles.serviceIcon} />
-              <h3>Typography Design</h3>
-              <p>Custom typography and font selection to enhance your brand's visual communication.</p>
+              <div className={styles.serviceIcon}>
+                <Layout />
+              </div>
+              <h3>Digital Graphics</h3>
+              <p>Web-optimized graphics and visual elements designed for maximum impact across digital platforms.</p>
+              <ul className={styles.serviceList}>
+                <li>Web Graphics</li>
+                <li>Social Media Assets</li>
+                <li>Email Templates</li>
+              </ul>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Layers className={styles.serviceIcon} />
-              <h3>Web Graphics</h3>
-              <p>Web-optimized graphics, icons, and visual elements for digital platforms.</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Monitor className={styles.serviceIcon} />
-              <h3>UI/UX Design</h3>
-              <p>User interface and user experience design for websites and applications.</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
-            <div className={styles.serviceCard}>
-              <Smartphone className={styles.serviceIcon} />
-              <h3>Social Media Graphics</h3>
-              <p>Eye-catching graphics and templates for social media platforms and campaigns.</p>
+              <div className={styles.serviceIcon}>
+                <Layers />
+              </div>
+              <h3>Illustration</h3>
+              <p>Custom illustrations that bring your ideas to life with unique, hand-crafted visual storytelling.</p>
+              <ul className={styles.serviceList}>
+                <li>Custom Illustrations</li>
+                <li>Icon Sets</li>
+                <li>Infographics</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className={styles.processSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Design Process</h2>
-            <p className={styles.sectionSubtitle}>
-              Creative process that delivers exceptional design solutions
-            </p>
+      <section className={styles.process}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Our Creative Process</h2>
+            <p className={styles.sectionSubtitle}>From concept to completion</p>
           </div>
-        </div>
-        
-        <div className="row">
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>01</div>
-              <h4>Discovery & Research</h4>
-              <p>We understand your brand, target audience, and design requirements through comprehensive research.</p>
+
+          <div className={styles.processSteps}>
+            <div className={styles.processStep}>
+              <div className={styles.stepNumber}>01</div>
+              <h4>Discovery</h4>
+              <p>We dive deep into your brand, audience, and goals to understand what makes you unique.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>02</div>
-              <h4>Concept Development</h4>
-              <p>We create initial design concepts and explore different creative directions for your project.</p>
+            <div className={styles.processLine}></div>
+            <div className={styles.processStep}>
+              <div className={styles.stepNumber}>02</div>
+              <h4>Concept</h4>
+              <p>Multiple creative directions are explored and presented for your review and feedback.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>03</div>
-              <h4>Design & Refinement</h4>
-              <p>We develop the chosen concept and refine it based on your feedback and requirements.</p>
+            <div className={styles.processLine}></div>
+            <div className={styles.processStep}>
+              <div className={styles.stepNumber}>03</div>
+              <h4>Refinement</h4>
+              <p>Your chosen concept is polished and perfected through collaborative iterations.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>04</div>
-              <h4>Final Delivery</h4>
-              <p>We deliver the final design files in all required formats for your use across different platforms.</p>
+            <div className={styles.processLine}></div>
+            <div className={styles.processStep}>
+              <div className={styles.stepNumber}>04</div>
+              <h4>Delivery</h4>
+              <p>Final files delivered in all formats you need, ready for any application.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className="row">
-          <div className="col-12 text-center">
-            <h2 className={styles.ctaTitle}>Ready to Elevate Your Brand Design?</h2>
-            <p className={styles.ctaSubtitle}>
-              Let's create stunning visual designs that capture your brand essence and engage your audience.
-            </p>
-            <button className={styles.ctaButton}>Start Your Design Project</button>
+      <section className={styles.cta}>
+        <div className="container">
+          <div className={styles.ctaContent}>
+            <h2 className={styles.ctaTitle}>Ready to Bring Your Vision to Life?</h2>
+            <p className={styles.ctaSubtitle}>Let's create something extraordinary together</p>
+            <button className={styles.ctaButton}>Get Started Today</button>
           </div>
         </div>
       </section>

@@ -1,142 +1,139 @@
-import styles from "../../../styles/pages/services.module.css"
-import { Smartphone, Code, Users, Zap, Shield, Headphones } from "lucide-react"
+import { Smartphone, Tablet, Watch, Zap, Users, Shield, ArrowRight, Star } from "lucide-react"
+import styles from "./app-dev.module.css"
 
 export default function AppDevelopmentPage() {
   return (
-    <main className="container my-5">
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <h1 className={styles.pageTitle}>App Development</h1>
-            <p className={styles.heroSubtitle}>
-              We create cutting-edge mobile applications for iOS and Android platforms, 
-              focusing on intuitive design and robust performance that drives user engagement.
+    <main className={styles.page}>
+      {/* Hero */}
+      <section className={styles.hero}>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <div className={styles.badge}>
+              <Star size={14} fill="currentColor" />
+              <span>iOS & Android Development</span>
+            </div>
+            <h1 className={styles.title}>
+              Mobile Apps That Users <span className={styles.gradient}>Love & Use Daily</span>
+            </h1>
+            <p className={styles.subtitle}>
+              We create intuitive, high-performance mobile applications for iOS and Android that engage users and drive
+              business growth. From concept to App Store launch, we handle everything.
             </p>
-            <div className={styles.heroActions}>
-              <button className={styles.primaryBtn}>Get Started</button>
-              <button className={styles.secondaryBtn}>View Portfolio</button>
+            <div className={styles.features}>
+              <div className={styles.feature}>
+                <Smartphone size={20} />
+                <span>Native & Cross-Platform</span>
+              </div>
+              <div className={styles.feature}>
+                <Zap size={20} />
+                <span>Fast Performance</span>
+              </div>
+              <div className={styles.feature}>
+                <Shield size={20} />
+                <span>Secure & Reliable</span>
+              </div>
+            </div>
+            <div className={styles.actions}>
+              <button className={styles.primaryBtn}>
+                Start Your App
+                <ArrowRight size={18} />
+              </button>
+              <button className={styles.secondaryBtn}>View App Portfolio</button>
             </div>
           </div>
-          <div className="col-lg-6">
-            <img
-              src="/placeholder.svg?height=400&width=500"
-              alt="App Development"
-              className={`img-fluid ${styles.heroImage}`}
-            />
+          <div className={styles.heroVisual}>
+            <div className={styles.phoneFrame}>
+              <div className={styles.phoneScreen}>
+                <div className={styles.appBar}></div>
+                <div className={styles.appContent}>
+                  <div className={styles.appCard}></div>
+                  <div className={styles.appCard}></div>
+                  <div className={styles.appCard}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className={styles.servicesSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our App Development Services</h2>
-            <p className={styles.sectionSubtitle}>
-              From concept to launch, we provide comprehensive mobile app development solutions.
-            </p>
-          </div>
-        </div>
-        
-        <div className="row g-4">
-          <div className="col-lg-4 col-md-6">
+      {/* Services */}
+      <section className={styles.services}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Complete Mobile App Development</h2>
+          <div className={styles.grid}>
             <div className={styles.serviceCard}>
-              <Smartphone className={styles.serviceIcon} />
+              <Smartphone className={styles.icon} size={36} />
               <h3>Native iOS Development</h3>
-              <p>High-performance iOS apps built with Swift and Objective-C, optimized for iPhone and iPad devices.</p>
+              <p>Swift and SwiftUI apps optimized for iPhone and iPad with native performance and features.</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
             <div className={styles.serviceCard}>
-              <Code className={styles.serviceIcon} />
+              <Tablet className={styles.icon} size={36} />
               <h3>Native Android Development</h3>
-              <p>Robust Android applications developed with Kotlin and Java, ensuring compatibility across devices.</p>
+              <p>Kotlin and Jetpack Compose apps that leverage the full power of Android devices.</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
             <div className={styles.serviceCard}>
-              <Users className={styles.serviceIcon} />
-              <h3>Cross-Platform Development</h3>
-              <p>React Native and Flutter solutions for cost-effective apps that work on both platforms.</p>
+              <Watch className={styles.icon} size={36} />
+              <h3>Cross-Platform Apps</h3>
+              <p>React Native and Flutter solutions for cost-effective apps on both platforms.</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
             <div className={styles.serviceCard}>
-              <Zap className={styles.serviceIcon} />
+              <Zap className={styles.icon} size={36} />
               <h3>UI/UX Design</h3>
-              <p>Intuitive and engaging user interfaces designed to provide exceptional user experiences.</p>
+              <p>Beautiful, intuitive interfaces designed following platform-specific guidelines.</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
             <div className={styles.serviceCard}>
-              <Shield className={styles.serviceIcon} />
-              <h3>Backend Integration</h3>
-              <p>Secure and scalable backend solutions with APIs, databases, and cloud infrastructure.</p>
+              <Users className={styles.icon} size={36} />
+              <h3>Backend & APIs</h3>
+              <p>Scalable backend infrastructure with secure APIs and real-time capabilities.</p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
             <div className={styles.serviceCard}>
-              <Headphones className={styles.serviceIcon} />
-              <h3>Ongoing Support</h3>
-              <p>Comprehensive maintenance, updates, and technical support to keep your app running smoothly.</p>
+              <Shield className={styles.icon} size={36} />
+              <h3>App Store Launch</h3>
+              <p>Complete App Store and Play Store submission, optimization, and approval support.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className={styles.processSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Development Process</h2>
-            <p className={styles.sectionSubtitle}>
-              A proven methodology that ensures successful app delivery.
-            </p>
-          </div>
-        </div>
-        
-        <div className="row">
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>01</div>
-              <h4>Discovery & Planning</h4>
-              <p>We analyze your requirements, define the scope, and create a detailed project roadmap.</p>
+      {/* Process */}
+      <section className={styles.process}>
+        <div className="container">
+          <h2 className={styles.processTitle}>Our App Development Journey</h2>
+          <div className={styles.steps}>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>01</div>
+              <h3>Discovery & Strategy</h3>
+              <p>We define your app's purpose, target users, features, and create a detailed development roadmap.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>02</div>
-              <h4>Design & Prototyping</h4>
-              <p>Our designers create wireframes, mockups, and interactive prototypes for your approval.</p>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>02</div>
+              <h3>Design & Prototype</h3>
+              <p>Interactive prototypes and pixel-perfect designs that bring your app vision to life.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>03</div>
-              <h4>Development & Testing</h4>
-              <p>We build your app using agile methodology with continuous testing and quality assurance.</p>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>03</div>
+              <h3>Development & Testing</h3>
+              <p>Agile development with continuous testing on real devices to ensure quality.</p>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>04</div>
-              <h4>Launch & Support</h4>
-              <p>We help you launch your app and provide ongoing support and maintenance services.</p>
+            <div className={styles.step}>
+              <div className={styles.stepNum}>04</div>
+              <h3>Launch & Growth</h3>
+              <p>App store launch, user feedback integration, and ongoing updates to grow your user base.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className="row">
-          <div className="col-12 text-center">
-            <h2 className={styles.ctaTitle}>Ready to Build Your App?</h2>
-            <p className={styles.ctaSubtitle}>
-              Let's discuss your app idea and create a solution that exceeds your expectations.
-            </p>
-            <button className={styles.ctaButton}>Start Your Project</button>
+      {/* CTA */}
+      <section className={styles.cta}>
+        <div className="container">
+          <div className={styles.ctaBox}>
+            <h2>Ready to Build Your Mobile App?</h2>
+            <p>Let's turn your app idea into a reality that users will love.</p>
+            <button className={styles.ctaBtn}>
+              Schedule a Consultation
+              <ArrowRight size={20} />
+            </button>
           </div>
         </div>
       </section>

@@ -1,141 +1,225 @@
-import { TrendingUp, Search, Users, Target, BarChart3, Globe } from "lucide-react"
+import { TrendingUp, Search, Users, Target, BarChart3, Globe, ArrowRight, Sparkles } from "lucide-react"
+import styles from "./digital-marketing.module.css"
 
 export default function DigitalMarketingPage() {
   return (
-    <main className="container my-5">
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <h1 className={styles.pageTitle}>Digital Marketing</h1>
-            <p className={styles.heroSubtitle}>
-              We implement data-driven digital marketing strategies to boost your online presence, attract more
-              customers, and drive sustainable business growth.
-            </p>
-            <div className={styles.heroActions}>
-              <button className={styles.primaryBtn}>Get Started</button>
-              <button className={styles.secondaryBtn}>View Case Studies</button>
+    <main className={styles.page}>
+      {/* Hero Section - Split design */}
+      <section className={styles.hero}>
+        <div className="container">
+          <div className={styles.heroGrid}>
+            <div className={styles.heroLeft}>
+              <div className={styles.tagline}>
+                <Sparkles size={16} />
+                <span>Data-Driven Marketing</span>
+              </div>
+              <h1 className={styles.title}>
+                Grow Your Brand with
+                <span className={styles.highlight}> Strategic Digital Marketing</span>
+              </h1>
+              <p className={styles.description}>
+                We craft data-driven marketing strategies that amplify your online presence, engage your target
+                audience, and drive measurable business growth across all digital channels.
+              </p>
+              <div className={styles.metrics}>
+                <div className={styles.metric}>
+                  <div className={styles.metricValue}>3.5x</div>
+                  <div className={styles.metricLabel}>Average ROI</div>
+                </div>
+                <div className={styles.metric}>
+                  <div className={styles.metricValue}>250%</div>
+                  <div className={styles.metricLabel}>Traffic Increase</div>
+                </div>
+                <div className={styles.metric}>
+                  <div className={styles.metricValue}>89%</div>
+                  <div className={styles.metricLabel}>Lead Growth</div>
+                </div>
+              </div>
+              <div className={styles.actions}>
+                <button className={styles.primaryBtn}>
+                  Get Free Audit
+                  <ArrowRight size={18} />
+                </button>
+                <button className={styles.secondaryBtn}>View Success Stories</button>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-6">
-            <img
-              src="/placeholder.svg?height=400&width=500"
-              alt="Digital Marketing"
-              className={`img-fluid ${styles.heroImage}`}
-            />
+            <div className={styles.heroRight}>
+              <div className={styles.chartContainer}>
+                <div className={styles.chartCard}>
+                  <div className={styles.chartHeader}>
+                    <span>Campaign Performance</span>
+                    <TrendingUp size={20} className={styles.trendIcon} />
+                  </div>
+                  <div className={styles.chartBars}>
+                    <div className={styles.bar} style={{ height: "60%" }}></div>
+                    <div className={styles.bar} style={{ height: "75%" }}></div>
+                    <div className={styles.bar} style={{ height: "90%" }}></div>
+                    <div className={styles.bar} style={{ height: "100%" }}></div>
+                  </div>
+                  <div className={styles.chartFooter}>
+                    <span className={styles.growth}>+127% Growth</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className={styles.servicesSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Digital Marketing Services</h2>
-            <p className={styles.sectionSubtitle}>
-              Comprehensive digital marketing solutions to grow your business
-            </p>
+      {/* Services Cards */}
+      <section className={styles.services}>
+        <div className="container">
+          <div className={styles.servicesHeader}>
+            <h2>Complete Digital Marketing Solutions</h2>
+            <p>Integrated strategies that work together to maximize your online impact</p>
           </div>
-        </div>
-        
-        <div className="row g-4">
-          <div className="col-lg-4 col-md-6">
+
+          <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
-              <Search className={styles.serviceIcon} />
+              <div className={styles.iconWrapper}>
+                <Search size={28} />
+              </div>
               <h3>SEO Optimization</h3>
-              <p>Search engine optimization to improve your website's visibility and organic traffic.</p>
+              <p>Dominate search rankings with technical SEO, content optimization, and strategic link building.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>+180% organic traffic</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <TrendingUp className={styles.serviceIcon} />
+              <div className={styles.iconWrapper}>
+                <TrendingUp size={28} />
+              </div>
               <h3>Social Media Marketing</h3>
-              <p>Strategic social media campaigns to engage your audience and build brand awareness.</p>
+              <p>Build engaged communities and drive conversions through strategic social campaigns.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>3.2M+ reach</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Target className={styles.serviceIcon} />
+              <div className={styles.iconWrapper}>
+                <Target size={28} />
+              </div>
               <h3>PPC Advertising</h3>
-              <p>Pay-per-click advertising campaigns to drive targeted traffic and conversions.</p>
+              <p>Maximize ROI with targeted ad campaigns across Google, Facebook, and LinkedIn.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>4.5x ROAS</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <BarChart3 className={styles.serviceIcon} />
-              <h3>Analytics & Reporting</h3>
-              <p>Comprehensive analytics and reporting to track performance and optimize campaigns.</p>
+              <div className={styles.iconWrapper}>
+                <BarChart3 size={28} />
+              </div>
+              <h3>Analytics & Insights</h3>
+              <p>Make informed decisions with comprehensive tracking, reporting, and data analysis.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>Real-time dashboards</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Users className={styles.serviceIcon} />
+              <div className={styles.iconWrapper}>
+                <Users size={28} />
+              </div>
               <h3>Content Marketing</h3>
-              <p>Strategic content creation and distribution to attract and engage your target audience.</p>
+              <p>Attract and engage your audience with compelling content that drives action.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>500K+ engagements</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+
             <div className={styles.serviceCard}>
-              <Globe className={styles.serviceIcon} />
+              <div className={styles.iconWrapper}>
+                <Globe size={28} />
+              </div>
               <h3>Email Marketing</h3>
-              <p>Targeted email campaigns to nurture leads and maintain customer relationships.</p>
+              <p>Nurture leads and retain customers with personalized email campaigns.</p>
+              <div className={styles.cardFooter}>
+                <span className={styles.result}>42% open rate</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className={styles.processSection}>
-        <div className="row">
-          <div className="col-12 text-center mb-5">
-            <h2 className={styles.sectionTitle}>Our Marketing Process</h2>
-            <p className={styles.sectionSubtitle}>
-              Data-driven approach to digital marketing success
-            </p>
+      <section className={styles.process}>
+        <div className="container">
+          <div className={styles.processHeader}>
+            <h2>Our Marketing Methodology</h2>
+            <p>A proven framework that delivers consistent, measurable results</p>
           </div>
-        </div>
-        
-        <div className="row">
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>01</div>
-              <h4>Strategy & Planning</h4>
-              <p>We analyze your business goals and develop a comprehensive digital marketing strategy.</p>
+
+          <div className={styles.processSteps}>
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>01</div>
+              <div className={styles.stepContent}>
+                <h3>Strategy & Research</h3>
+                <p>Deep dive into your market, competitors, and audience to craft a winning strategy.</p>
+                <ul>
+                  <li>Market analysis</li>
+                  <li>Competitor research</li>
+                  <li>Audience profiling</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>02</div>
-              <h4>Campaign Development</h4>
-              <p>We create and launch targeted marketing campaigns across multiple digital channels.</p>
+
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>02</div>
+              <div className={styles.stepContent}>
+                <h3>Campaign Launch</h3>
+                <p>Execute multi-channel campaigns with precision targeting and compelling creative.</p>
+                <ul>
+                  <li>Channel setup</li>
+                  <li>Creative development</li>
+                  <li>Campaign deployment</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>03</div>
-              <h4>Monitoring & Optimization</h4>
-              <p>We continuously monitor performance and optimize campaigns for better results.</p>
+
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>03</div>
+              <div className={styles.stepContent}>
+                <h3>Optimization</h3>
+                <p>Continuously monitor, test, and refine campaigns for maximum performance.</p>
+                <ul>
+                  <li>A/B testing</li>
+                  <li>Performance tracking</li>
+                  <li>Budget optimization</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mb-4">
-            <div className={styles.processCard}>
-              <div className={styles.processNumber}>04</div>
-              <h4>Reporting & Analysis</h4>
-              <p>We provide detailed reports and insights to measure success and plan future strategies.</p>
+
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>04</div>
+              <div className={styles.stepContent}>
+                <h3>Scale & Grow</h3>
+                <p>Expand successful campaigns and explore new opportunities for growth.</p>
+                <ul>
+                  <li>Scaling strategies</li>
+                  <li>New channel testing</li>
+                  <li>ROI maximization</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className="row">
-          <div className="col-12 text-center">
-            <h2 className={styles.ctaTitle}>Ready to Grow Your Business Online?</h2>
-            <p className={styles.ctaSubtitle}>
-              Let's create a digital marketing strategy that drives results and grows your business.
-            </p>
-            <button className={styles.ctaButton}>Start Your Campaign</button>
+      <section className={styles.cta}>
+        <div className="container">
+          <div className={styles.ctaBox}>
+            <div className={styles.ctaContent}>
+              <h2>Ready to Accelerate Your Growth?</h2>
+              <p>Get a free marketing audit and discover untapped opportunities for your business.</p>
+            </div>
+            <button className={styles.ctaButton}>
+              Claim Your Free Audit
+              <ArrowRight size={20} />
+            </button>
           </div>
         </div>
       </section>

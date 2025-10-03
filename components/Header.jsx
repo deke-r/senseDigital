@@ -96,7 +96,7 @@ export default function Header() {
         <div className="container">
           {/* Logo */}
           <Link href="/" className={`navbar-brand ${styles.brand}`}>
-            <Image src="/img/logo.png" alt="Logo" width={30} height={30} priority />
+            <Image src="/img/logo.png" alt="Logo" width={40} height={40} priority />
           </Link>
 
           {/* Toggler */}
