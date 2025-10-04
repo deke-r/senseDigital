@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import {
   BsGraphUp,
   BsLinkedin,
@@ -14,7 +15,9 @@ import {
   BsLaptop,
   BsCodeSlash,
   BsPhoneFill,
+  BsChevronDown,
 } from "react-icons/bs";
+import { useDarkMode } from "../context/DarkModeContext";
 import styles from "../styles/components/header.module.css";
 import DarkModeToggle from "./DarkModeToggle";
 import CTAbtn from "./CTAbtn";
@@ -49,7 +52,7 @@ const dropdownItems = {
   seo: [
     { title: "On-Page SEO", desc: "Optimize content & structure for search engines.", icon: <BsFileText />, link: "/services/on-page-seo" },
     { title: "Off-Page SEO", desc: "Build authority with backlinks & outreach.", icon: <BsGraphUp />, link: "/services/off-page-seo" },
-    { title: "E-Commerce SEO", desc: "Boost your online store’s visibility.", icon: <BsShop />, link: "/services/e-commerce-seo" },
+    { title: "E-Commerce SEO", desc: "Boost your online store's visibility.", icon: <BsShop />, link: "/services/e-commerce-seo" },
     { title: "Mobile SEO", desc: "Optimize for mobile-first indexing.", icon: <BsPhone />, link: "/services/mobile-seo" },
     { title: "SEO Outsourcing", desc: "Delegate SEO tasks to experts.", icon: <BsEnvelope />, link: "/services/search-engine-optimization-outsourcing-seo" },
     { title: "Local SEO", desc: "Get found in local search results.", icon: <BsGraphUp />, link: "/services/local-seo" },
@@ -70,36 +73,43 @@ const dropdownItems = {
 };
 
 export default function Header() {
-  const renderDropdown = (items) => {
+  const { isDarkMode } = useDarkMode();
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const renderDropdown = (items, category) => {
+    const isActive = activeDropdown === category;
     return (
-      <ul className={`dropdown-menu megaMenus shadow ${styles.dropdownMenu}`}>
+      <div 
+        className={`${styles.dropdownMenu} ${isActive ? styles.dropdownActive : ''}`}
+      >
         {items.map((item, i) => (
-          <li key={i} className={styles.dropdownItemWrapper}>
-            <Link href={item.link} className={`dropdown-item ${styles.dropdownItem}`}>
-              <div className={styles.dropdownContent}>
-                <span className={styles.icon}>{item.icon}</span>
-                <div>
-                  <div className={styles.title}>{item.title}</div>
-                  <div className={styles.desc}>{item.desc}</div>
-                </div>
-              </div>
-            </Link>
-          </li>
+          <Link 
+            key={i} 
+            href={item.link}
+            className={`${styles.dropdownItemWrapper} ${styles.dropdownItem}`}
+          >
+            <span className={styles.dropdownIcon}>{item.icon}</span>
+            <div>
+              <div className={styles.dropdownTitle}>{item.title}</div>
+              <div className={styles.dropdownDesc}>{item.desc}</div>
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     );
   };
 
   return (
-    <header className="bg-light">
-      <nav className="navbar navbar-expand-lg navbar-dark">
+    <header className={`${styles.header} ${isDarkMode ? styles.darkMode : styles.lightMode}`}>
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
           {/* Logo */}
           <Link href="/" className={`navbar-brand ${styles.brand}`}>
             <Image src="/img/logo.png" alt="Logo" width={40} height={40} priority />
+            <span className={`${styles.brandText}`}>MetaSense</span>
           </Link>
 
-          {/* Toggler */}
+          {/* Bootstrap Toggler */}
           <button
             className="navbar-toggler"
             type="button"
@@ -112,9 +122,9 @@ export default function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Menu */}
+          {/* Bootstrap Collapse */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto bottom_header">
+            <ul className="navbar-nav me-auto">
               {/* Digital Marketing */}
               <li className="nav-item">
                 <Link href="/services/digital-marketing" className={`nav-link ${styles.navLink}`}>
@@ -122,60 +132,52 @@ export default function Header() {
                 </Link>
               </li>
 
-              {/* PPC */}
-              <li className="nav-item dropdown">
-                <Link
-                  href="#"
-                  className={`nav-link dropdown-toggle ${styles.navLink}`}
-                  data-bs-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  PPC
+              {/* PPC Dropdown */}
+              <li 
+                className="nav-item dropdown"
+                onMouseEnter={() => setActiveDropdown('ppc')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <Link href="#" className={`nav-link  ${styles.navLink}`}>
+                  PPC <BsChevronDown className={styles.chevronIcon} />
                 </Link>
-                {renderDropdown(dropdownItems.ppc)}
+                {renderDropdown(dropdownItems.ppc, 'ppc')}
               </li>
 
-              {/* SEO */}
-              <li className="nav-item dropdown">
-                <Link
-                  href="#"
-                  className={`nav-link dropdown-toggle ${styles.navLink}`}
-                  data-bs-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  SEO
+              {/* SEO Dropdown */}
+              <li 
+                className="nav-item dropdown"
+                onMouseEnter={() => setActiveDropdown('seo')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <Link href="#" className={`nav-link  ${styles.navLink}`}>
+                  SEO <BsChevronDown className={styles.chevronIcon} />
                 </Link>
-                {renderDropdown(dropdownItems.seo)}
+                {renderDropdown(dropdownItems.seo, 'seo')}
               </li>
 
-              {/* SMO */}
-              <li className="nav-item dropdown">
-                <Link
-                  href="#"
-                  className={`nav-link dropdown-toggle ${styles.navLink}`}
-                  data-bs-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  SMO
+              {/* SMO Dropdown */}
+              <li 
+                className="nav-item dropdown"
+                onMouseEnter={() => setActiveDropdown('smo')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <Link href="#" className={`nav-link  ${styles.navLink}`}>
+                  SMO <BsChevronDown className={styles.chevronIcon} />
                 </Link>
-                {renderDropdown(dropdownItems.smo)}
+                {renderDropdown(dropdownItems.smo, 'smo')}
               </li>
 
-              {/* Development */}
-              <li className="nav-item dropdown">
-                <Link
-                  href="#"
-                  className={`nav-link dropdown-toggle ${styles.navLink}`}
-                  data-bs-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  Development
+              {/* Development Dropdown */}
+              <li 
+                className="nav-item dropdown"
+                onMouseEnter={() => setActiveDropdown('development')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <Link href="#" className={`nav-link  ${styles.navLink}`}>
+                  Development <BsChevronDown className={styles.chevronIcon} />
                 </Link>
-                {renderDropdown(dropdownItems.development)}
+                {renderDropdown(dropdownItems.development, 'development')}
               </li>
 
               {/* Others */}
@@ -185,20 +187,18 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/website-designing" className={`nav-link ${styles.navLink}`}>
-                  Website Designing
+                <Link href="/services/ui-ux" className={`nav-link ${styles.navLink}`}>
+                  UI/UX Design
                 </Link>
               </li>
             </ul>
 
             {/* Right Menu */}
-            <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav">
               <li className="nav-item d-flex align-items-center">
                 <DarkModeToggle />
               </li>
-              <li className="nav-item">
-                <CTAbtn />
-              </li>
+             
             </ul>
           </div>
         </div>

@@ -3,7 +3,6 @@
   padding: 0.5rem !important;
   margin: 0 !important;
   background: transparent !important;
-  color: black !important;
   transition: all 0.3s ease !important;
   display: flex !important;
   align-items: center !important;
@@ -11,16 +10,32 @@
   border-radius: 50% !important;
   width: 40px !important;
   height: 40px !important;
+  cursor: pointer;
 }
 
-.toggleButton:hover {
+/* Light mode styles */
+[data-bs-theme="light"] .toggleButton {
+  color: #1e293b !important;
+}
+
+[data-bs-theme="light"] .toggleButton:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #3b82f6 !important;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] .toggleButton {
+  color: #e2e8f0 !important;
+}
+
+[data-bs-theme="dark"] .toggleButton:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
-  color: inherit !important;
+  color: #3b82f6 !important;
 }
 
 .toggleButton:focus {
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
 }
 
 .icon {
@@ -31,12 +46,21 @@
   transform: scale(1.1);
 }
 
-/* Dark mode specific styles */
-[data-bs-theme="dark"] .toggleButton:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .toggleButton {
+    border: 1px solid currentColor !important;
+  }
 }
 
-/* Light mode specific styles */
-[data-bs-theme="light"] .toggleButton:hover {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggleButton,
+  .icon {
+    transition: none !important;
+  }
+  
+  .toggleButton:hover .icon {
+    transform: none !important;
+  }
 }

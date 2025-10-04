@@ -1,17 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Globe,
+  Search,
+  MousePointer,
+  Smartphone,
+  Users,
+  Shield,
+  ArrowRight
+} from "lucide-react";
 import styles from "../styles/components/footer.module.css";
 
 export default function Footer() {
   const services = [
-    { title: "Digital Marketing", link: "/digital-marketing-services", icon: <Mail size={18} /> },
-    { title: "SEO Services", link: "/search-engine-optimization-seo-services", icon: <MapPin size={18} /> },
-    { title: "PPC Campaigns", link: "/pay-per-click-ppc-management-services", icon: <Mail size={18} /> },
-    { title: "Social Media Marketing", link: "/social-media-optimization-services", icon: <Instagram size={18} /> },
-    { title: "Web Development", link: "/website-development-services", icon: <Phone size={18} /> },
-    { title: "App Development", link: "/app-development-services", icon: <Phone size={18} /> },
+    { title: "Digital Marketing", link: "/services/digital-marketing", icon: <Globe size={16} /> },
+    { title: "SEO Services", link: "/services/search-engine-optimization-outsourcing-seo", icon: <Search size={16} /> },
+    { title: "PPC Campaigns", link: "/services/google-ads-management", icon: <MousePointer size={16} /> },
+    { title: "Social Media Marketing", link: "/services/social-media-optimization", icon: <Users size={16} /> },
+    { title: "Web Development", link: "/services/website-development", icon: <Globe size={16} /> },
+    { title: "App Development", link: "/services/app-development", icon: <Smartphone size={16} /> },
   ];
 
   const quickLinks = [
@@ -23,41 +38,54 @@ export default function Footer() {
     { title: "Privacy Policy", link: "/privacy-policy" },
   ];
 
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    // Handle newsletter subscription
+    console.log("Newsletter subscription");
+  };
+
   return (
     <footer className={styles.footer}>
       <div className="container">
+        {/* Main Footer Content */}
         <div className="row">
-
-          {/* About */}
-          <div className="col-md-3 mb-4 mb-md-0">
-            <h5 className={styles.footerHeading}>Sense Digital</h5>
-            <p className={styles.footerText}>
-              Your trusted partner in digital transformation and technology solutions.
-              We help brands grow online with innovative strategies and cutting-edge solutions.
-            </p>
-            <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialIcon} aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className={styles.socialIcon} aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className={styles.socialIcon} aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className={styles.socialIcon} aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
+          {/* Company Info */}
+          <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div className={styles.companySection}>
+              <div className={styles.logoSection}>
+                <h3 className={styles.companyName}>MetaSense</h3>
+                <div className={styles.tagline}>Digital Excellence Delivered</div>
+              </div>
+              <p className={styles.companyDescription}>
+                Your trusted partner in digital transformation and technology solutions. 
+                We help brands grow online with innovative strategies and cutting-edge solutions 
+                that drive real results.
+              </p>
+              <div className={styles.socialLinks}>
+                <a href="#" className={styles.socialIcon} aria-label="Facebook">
+                  <Facebook size={20} />
+                </a>
+                <a href="#" className={styles.socialIcon} aria-label="Twitter">
+                  <Twitter size={20} />
+                </a>
+                <a href="#" className={styles.socialIcon} aria-label="LinkedIn">
+                  <Linkedin size={20} />
+                </a>
+                <a href="#" className={styles.socialIcon} aria-label="Instagram">
+                  <Instagram size={20} />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-3 mb-4 mb-md-0">
+          <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
             <h5 className={styles.footerHeading}>Quick Links</h5>
             <ul className={styles.footerLinks}>
               {quickLinks.map((link, i) => (
                 <li key={i}>
                   <Link href={link.link} className={styles.footerLink}>
+                    <ArrowRight size={14} />
                     {link.title}
                   </Link>
                 </li>
@@ -66,7 +94,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="col-md-3 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <h5 className={styles.footerHeading}>Our Services</h5>
             <ul className={styles.footerLinks}>
               {services.map((service, i) => (
@@ -80,29 +108,61 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="col-md-3">
-            <h5 className={styles.footerHeading}>Contact Us</h5>
-            <p className={styles.footerText}>
-              <MapPin size={16} /> 123 Digital Street, New York, USA
-              <br />
-              <Phone size={16} /> +1 (123) 456-7890
-              <br />
-              <Mail size={16} /> info@sense.digital
-            </p>
-            <h6 className={styles.footerHeading}>Newsletter</h6>
-            <div className={styles.newsletter}>
-              <input type="email" placeholder="Your email" className={styles.newsInput} />
-              <button className={styles.newsBtn}>Subscribe</button>
+          {/* Contact & Newsletter */}
+          <div className="col-lg-3 col-md-6">
+            <h5 className={styles.footerHeading}>Get In Touch</h5>
+            <div className={styles.contactInfo}>
+              <div className={styles.contactItem}>
+                <MapPin size={16} className={styles.contactIcon} />
+                <span>123 Digital Street, New York, USA</span>
+              </div>
+              <div className={styles.contactItem}>
+                <Phone size={16} className={styles.contactIcon} />
+                <span>+1 (123) 456-7890</span>
+              </div>
+              <div className={styles.contactItem}>
+                <Mail size={16} className={styles.contactIcon} />
+                <span>info@meta.sense</span>
+              </div>
+            </div>
+            
+            <div className={styles.newsletterSection}>
+              <h6 className={styles.newsletterTitle}>Stay Updated</h6>
+              <p className={styles.newsletterDescription}>
+                Get the latest insights and updates delivered to your inbox.
+              </p>
+              <form onSubmit={handleNewsletterSubmit} className={styles.newsletter}>
+                <div className={styles.newsletterInputGroup}>
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className={styles.newsInput}
+                    required
+                  />
+                  <button type="submit" className={styles.newsBtn}>
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
-        <div className={`row ${styles.bottomBar}`}>
-          <div className="col-12 text-center">
-            <p className={styles.copyright}>&copy; {new Date().getFullYear()} Sense Digital. All rights reserved.</p>
+        <div className={styles.bottomBar}>
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <p className={styles.copyright}>
+                &copy; {new Date().getFullYear()} MetaSense. All rights reserved.
+              </p>
+            </div>
+            <div className="col-md-6">
+              <div className={styles.bottomLinks}>
+                <Link href="/privacy-policy" className={styles.bottomLink}>Privacy Policy</Link>
+                <Link href="/terms-of-service" className={styles.bottomLink}>Terms of Service</Link>
+                <Link href="/cookie-policy" className={styles.bottomLink}>Cookie Policy</Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
