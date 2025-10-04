@@ -74,11 +74,11 @@ const Hero = () => {
           <div className="col-lg-5 col-md-12">
             <div className={styles.heroImage}>
               <div className={styles.imageContainer}>
-                <img
+                {/* <img
                   src="/placeholder.svg?height=500&width=500"
                   alt="Digital Solutions"
                   className="img-fluid"
-                />
+                /> */}
                 <div className={styles.floatingCard}>
                   <div className={styles.cardIcon}>
                     <Award size={24} />
