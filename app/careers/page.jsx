@@ -8,7 +8,7 @@ import {
   Users, 
   MapPin, 
   Clock, 
-  DollarSign, 
+  IndianRupee, 
   Heart, 
   Lightbulb, 
   Target,
@@ -28,16 +28,17 @@ export default function CareersPage() {
       id: 1,
       title: "Senior Digital Marketing Specialist",
       department: "Marketing",
-      location: "Remote / New York",
-      type: "Full-time",
+      location: "New Delhi, India",
+      type: "Full-time (On-site)",
       experience: "3-5 years",
-      salary: "$60,000 - $80,000",
-      description: "We're looking for a creative and data-driven digital marketing specialist to lead our client campaigns and drive growth.",
+      salary: "₹8–12 LPA",
+      description:
+        "We’re seeking a creative and data-driven digital marketing specialist to lead client campaigns, manage ad budgets, and drive measurable business growth.",
       requirements: [
-        "Bachelor's degree in Marketing or related field",
-        "3+ years of digital marketing experience",
-        "Proficiency in Google Ads, Facebook Ads, and analytics tools",
-        "Strong analytical and communication skills"
+        "Bachelor’s degree in Marketing, Business, or related field",
+        "3+ years of digital marketing experience in an agency or corporate setup",
+        "Hands-on experience with Google Ads, Meta Ads, and Analytics tools",
+        "Excellent communication and analytical skills"
       ],
       posted: "2 days ago"
     },
@@ -45,16 +46,17 @@ export default function CareersPage() {
       id: 2,
       title: "Full-Stack Developer",
       department: "Development",
-      location: "Remote / San Francisco",
-      type: "Full-time",
+      location: "New Delhi, India",
+      type: "Full-time (On-site)",
       experience: "2-4 years",
-      salary: "$70,000 - $95,000",
-      description: "Join our development team to build cutting-edge web applications and digital solutions for our clients.",
+      salary: "₹10–14 LPA",
+      description:
+        "Join our development team to build cutting-edge web applications and digital platforms that deliver exceptional performance and scalability.",
       requirements: [
-        "Bachelor's degree in Computer Science or equivalent experience",
+        "Bachelor’s degree in Computer Science or equivalent experience",
         "2+ years of full-stack development experience",
         "Proficiency in React, Node.js, and modern web technologies",
-        "Experience with databases and cloud platforms"
+        "Experience with databases (MySQL/MongoDB) and cloud platforms"
       ],
       posted: "1 week ago"
     },
@@ -62,16 +64,17 @@ export default function CareersPage() {
       id: 3,
       title: "UI/UX Designer",
       department: "Design",
-      location: "Remote / Los Angeles",
-      type: "Full-time",
+      location: "New Delhi, India",
+      type: "Full-time (On-site)",
       experience: "2-3 years",
-      salary: "$55,000 - $75,000",
-      description: "Create beautiful and intuitive user experiences that delight our clients and their customers.",
+      salary: "₹6–9 LPA",
+      description:
+        "Create beautiful and intuitive user experiences that delight our clients and users. Work closely with developers and product teams to bring ideas to life.",
       requirements: [
-        "Bachelor's degree in Design or related field",
+        "Bachelor’s degree in Design, HCI, or related field",
         "2+ years of UI/UX design experience",
-        "Proficiency in Figma, Adobe Creative Suite",
-        "Strong portfolio showcasing design skills"
+        "Proficiency in Figma, Adobe XD, or similar design tools",
+        "Strong portfolio showcasing creative design solutions"
       ],
       posted: "3 days ago"
     },
@@ -79,20 +82,23 @@ export default function CareersPage() {
       id: 4,
       title: "SEO Specialist",
       department: "Marketing",
-      location: "Remote / Chicago",
-      type: "Full-time",
+      location: "New Delhi, India",
+      type: "Full-time (On-site)",
       experience: "1-3 years",
-      salary: "$45,000 - $65,000",
-      description: "Help our clients improve their search engine rankings and organic traffic through strategic SEO practices.",
+      salary: "5–8 LPA",
+      description:
+        "Help clients improve their organic rankings and website traffic through data-backed SEO strategies and on-page/off-page optimization.",
       requirements: [
-        "Bachelor's degree in Marketing or related field",
-        "1+ years of SEO experience",
-        "Knowledge of SEO tools and analytics platforms",
-        "Strong understanding of search algorithms"
+        "Bachelor’s degree in Marketing or related field",
+        "1+ years of SEO experience (agency experience preferred)",
+        "Knowledge of tools like Ahrefs, SEMrush, and Google Analytics",
+        "Strong understanding of search algorithms and keyword strategy"
       ],
       posted: "5 days ago"
     }
   ];
+  
+  
 
   const benefits = [
     {
@@ -101,7 +107,7 @@ export default function CareersPage() {
       description: "Comprehensive health insurance, dental, vision, and mental health support"
     },
     {
-      icon: <DollarSign />,
+      icon: <IndianRupee />,
       title: "Competitive Salary",
       description: "Market-competitive compensation with performance bonuses and equity options"
     },
@@ -211,7 +217,7 @@ export default function CareersPage() {
                       <span className={`${isDarkMode ? styles.darkSubtitle : styles.lightSubtitle}`}>{job.experience}</span>
                     </div>
                     <div className={styles.jobMetaItem}>
-                      <DollarSign className={`${styles.metaIcon} ${isDarkMode ? styles.darkIcon : styles.lightIcon}`} />
+                      <IndianRupee className={`${styles.metaIcon} ${isDarkMode ? styles.darkIcon : styles.lightIcon}`} />
                       <span className={`${isDarkMode ? styles.darkSubtitle : styles.lightSubtitle}`}>{job.salary}</span>
                     </div>
                   </div>
