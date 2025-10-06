@@ -37,60 +37,67 @@ const SuccessStories = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      avatar: "👩‍💼",
-      content: "Sense Digital transformed our online presence completely. Our website traffic increased by 400% and we're now ranking #1 for our main keywords. The team's expertise is unmatched.",
-      rating: 5,
-      results: ["400% Traffic Increase", "Top 3 Rankings", "6 Months"]
-    },
-    {
-      name: "Michael Chen",
-      company: "E-Commerce Plus",
-      role: "Marketing Director",
-      avatar: "👨‍💻",
-      content: "Working with Sense Digital was a game-changer for our business. They helped us optimize our e-commerce platform and our sales doubled within 8 months. Highly recommended!",
-      rating: 5,
-      results: ["200% Sales Growth", "50% Conversion Rate", "8 Months"]
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Local Business Hub",
-      role: "Founder",
-      avatar: "👩‍🎨",
-      content: "The local SEO services brought us more customers than we ever imagined. We went from struggling to get noticed to being the go-to business in our area. Amazing results!",
-      rating: 5,
-      results: ["500% Local Visibility", "Top Local Rankings", "4 Months"]
-    },
-    {
-      name: "David Thompson",
-      company: "FinanceFlow",
-      role: "CTO",
+      name: "Aarav Mehta",
+      company: "BrightMart Retail",
+      role: "Founder & CEO",
       avatar: "👨‍💼",
-      content: "Sense Digital's web development team created a stunning, fast, and secure platform for us. Our user engagement increased by 300% and we've received countless compliments.",
+      content:
+        "Sense Digital helped us revamp our e-commerce website and run targeted ad campaigns. Within 6 months, our sales grew by 350%. Their team truly understands the Indian market!",
       rating: 5,
-      results: ["300% User Engagement", "99.9% Uptime", "3 Months"]
+      results: ["350% Sales Growth", "Improved Ad ROI", "6 Months"]
     },
     {
-      name: "Lisa Wang",
-      company: "HealthTech Solutions",
-      role: "VP Marketing",
+      name: "Priya Sharma",
+      company: "HealthNest Clinic",
+      role: "Marketing Head",
       avatar: "👩‍⚕️",
-      content: "Their digital marketing strategies helped us reach our target audience effectively. Our lead generation increased by 250% and the quality of leads improved significantly.",
+      content:
+        "We saw a 400% increase in appointment bookings after their local SEO work. Our clinic now ranks #1 in our city for major keywords. Highly professional and responsive team.",
       rating: 5,
-      results: ["250% Lead Generation", "High-Quality Leads", "5 Months"]
+      results: ["400% More Bookings", "Top Local Rankings", "5 Months"]
     },
     {
-      name: "James Wilson",
-      company: "EduTech Platform",
-      role: "Operations Manager",
+      name: "Rohan Verma",
+      company: "EduSpark Learning",
+      role: "Co-Founder",
       avatar: "👨‍🏫",
-      content: "The team's attention to detail and commitment to our success is outstanding. They delivered our project ahead of schedule and exceeded all our expectations.",
+      content:
+        "Sense Digital’s performance marketing campaigns brought us consistent leads for our online courses. Our cost per lead dropped by 45%. Excellent ROI and transparency.",
       rating: 5,
-      results: ["Ahead of Schedule", "Exceeded Expectations", "2 Months"]
+      results: ["45% Lower CPL", "High-Quality Leads", "4 Months"]
+    },
+    {
+      name: "Neha Patel",
+      company: "UrbanGlow Beauty Studio",
+      role: "Owner",
+      avatar: "👩‍🎨",
+      content:
+        "Their social media strategy completely changed how people perceive our brand. Our followers grew by 500% and we’re now fully booked most weekends!",
+      rating: 5,
+      results: ["500% Follower Growth", "Full Bookings", "3 Months"]
+    },
+    {
+      name: "Siddharth Iyer",
+      company: "FinEdge Advisors",
+      role: "CTO",
+      avatar: "👨‍💻",
+      content:
+        "The web development team at Sense Digital built a fast, secure, and elegant platform for our fintech startup. We’ve seen 250% more user signups and zero downtime.",
+      rating: 5,
+      results: ["250% More Signups", "99.9% Uptime", "3 Months"]
+    },
+    {
+      name: "Ananya Das",
+      company: "TasteBite Foods",
+      role: "Brand Manager",
+      avatar: "👩‍💼",
+      content:
+        "We collaborated with Sense Digital for our product launch. Their influencer and digital campaigns helped us reach millions of new customers across India.",
+      rating: 5,
+      results: ["Viral Reach", "Successful Product Launch", "2 Months"]
     }
   ];
+  
 
   const caseStudies = [
     {

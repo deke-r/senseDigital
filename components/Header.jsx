@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BsGraphUp,
   BsLinkedin,
@@ -75,6 +75,18 @@ const dropdownItems = {
 export default function Header() {
   const { isDarkMode } = useDarkMode();
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const renderDropdown = (items, category) => {
     const isActive = activeDropdown === category;
@@ -100,7 +112,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`${styles.header} ${isDarkMode ? styles.darkMode : styles.lightMode}`}>
+    <header className={`${styles.header} ${isDarkMode ? styles.darkMode : styles.lightMode} ${isScrolled ? styles.scrolled : ''}`}>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           {/* Logo */}
@@ -189,6 +201,16 @@ export default function Header() {
               <li className="nav-item">
                 <Link href="/services/ui-ux" className={`nav-link ${styles.navLink}`}>
                   UI/UX Design
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/contact" className={`nav-link ${styles.navLink}`}>
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/careers" className={`nav-link ${styles.navLink}`}>
+                  Careers
                 </Link>
               </li>
             </ul>

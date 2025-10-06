@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
-      <body className="d-flex flex-column min-vh-100">
+      <body className="d-flex flex-column min-vh-100" style={{ paddingTop: '80px' }}>
         <DarkModeProvider>
           <Bootstrap />
           <Header />

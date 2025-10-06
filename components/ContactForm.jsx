@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { useDarkMode } from "../context/DarkModeContext"
 import styles from "../styles/components/contact-form.module.css"
 
 export default function ContactForm() {
@@ -14,6 +15,7 @@ export default function ContactForm() {
   } = useForm()
   const router = useRouter()
   const [submitError, setSubmitError] = useState("")
+  const { isDarkMode } = useDarkMode()
 
   const onSubmit = async (data) => {
     setSubmitError("")
@@ -39,7 +41,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
+    <form onSubmit={handleSubmit(onSubmit)} className={`${styles.contactForm} ${isDarkMode ? styles.darkMode : styles.lightMode}`}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
