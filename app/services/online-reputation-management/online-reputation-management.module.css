@@ -471,3 +471,316 @@
   text-align: center;
   margin-bottom: 60px;
 }
+
+
+
+.processHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.processHeader h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processHeader h2 {
+  color: #ffffff;
+}
+
+.processHeader p {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processHeader p {
+  color: #cccccc;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.step {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .step {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.step:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 12px 40px rgba(245, 158, 11, 0.12);
+  transform: translateY(-4px);
+}
+
+.stepNumber {
+  font-size: 24px;
+  font-weight: 800;
+  color: #f59e0b;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+[data-bs-theme="dark"] .stepNumber {
+  background: #1a1a1a;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepContent h3 {
+  color: #ffffff;
+}
+
+.stepContent p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepContent p {
+  color: #cccccc;
+}
+
+.stepContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stepContent li {
+  color: #6b7280;
+  font-size: 14px;
+  padding-left: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .stepContent li {
+  color: #cccccc;
+}
+
+.stepContent li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta {
+  padding: 100px 0;
+  background: #f9fafb;
+  transition: background-color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .cta {
+  background: #1a1a1a;
+}
+
+.ctaBox {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+[data-bs-theme="dark"] .ctaBox {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.ctaContent h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .ctaContent h2 {
+  color: #ffffff;
+}
+
+.ctaContent p {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .ctaContent p {
+  color: #cccccc;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .platformsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .metrics {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicesGrid,
+  .platformsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesHeader h2,
+  .platformsHeader h2,
+  .processHeader h2 {
+    font-size: 32px;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ctaBox {
+    padding: 40px 24px;
+  }
+
+  .ctaContent h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .servicesHeader h2,
+  .platformsHeader h2,
+  .processHeader h2 {
+    font-size: 24px;
+  }
+
+  .serviceCard,
+  .platformCard,
+  .step {
+    padding: 24px;
+  }
+
+  .ctaBox {
+    padding: 32px 20px;
+  }
+
+  .ctaContent h2 {
+    font-size: 24px;
+  }
+}

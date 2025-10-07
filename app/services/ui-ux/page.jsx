@@ -1,5 +1,7 @@
-import { Figma, Smartphone, Monitor, Users, Zap, Target } from "lucide-react"
+import { Figma, Smartphone, Monitor, Users, Zap, Target, ArrowRight } from "lucide-react"
 import styles from "./ui-ux.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 export default function UIUXPage() {
   return (
@@ -30,7 +32,15 @@ export default function UIUXPage() {
                   <div className={styles.statLabel}>Avg. Conversion Lift</div>
                 </div>
               </div>
-              <button className={styles.ctaBtn}>Start Your Design Project</button>
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Your Design Project <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.ctaBtn} rounded-4`}
+              />
+              {/* <button className={styles.ctaBtn}>Start Your Design Project</button> */}
             </div>
             <div className={styles.heroVisual}>
               <div className={styles.mockup}>
@@ -135,10 +145,20 @@ export default function UIUXPage() {
           <div className={styles.ctaBox}>
             <h2>Ready to Create Amazing User Experiences?</h2>
             <p>Let's design something users will love</p>
-            <button className={styles.ctaButton}>Get Started</button>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Started <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>Get Started</button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

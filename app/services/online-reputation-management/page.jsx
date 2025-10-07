@@ -1,6 +1,8 @@
 import { Shield, Search, AlertTriangle, BarChart3, Users, Globe, ArrowRight, Sparkles, Star, Mic, Image } from "lucide-react"
 import styles from "./online-reputation-management.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+          
 export default function OnlineReputationManagementPage() {
   return (
     <main className={styles.page}>
@@ -36,10 +38,18 @@ export default function OnlineReputationManagementPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Reputation Management <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-3`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Start Reputation Management
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
                 <button className={styles.secondaryBtn}>View Case Studies</button>
               </div>
             </div>
@@ -272,13 +282,23 @@ export default function OnlineReputationManagementPage() {
               <h2>Ready to Take Control of Your Reputation?</h2>
               <p>Get a free reputation audit and see how we can enhance your brand's online presence.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Free Reputation Audit <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Get Free Reputation Audit
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

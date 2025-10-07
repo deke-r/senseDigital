@@ -11,8 +11,11 @@ import {
   UserCheck,
   BarChart3,
   Rocket,
+  ArrowRight,
 } from "lucide-react"
 import styles from "./linkedin-ads.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const LinkedInAdsManagement = () => {
   return (
@@ -34,11 +37,19 @@ const LinkedInAdsManagement = () => {
               strategies generate high-quality B2B leads that convert.
             </p>
             <div className={styles.heroButtons}>
-              <Button className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Generate Leads <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Button className={styles.primaryButton}>
                 <Rocket className="w-5 h-5 mr-2" />
                 Generate Leads
-              </Button>
-              <Button className={styles.secondaryButton}>View Success Stories</Button>
+              </Button> */}
+              <Button className={`${styles.secondaryButton} rounded-4 border-0`}>View Success Stories</Button>
             </div>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
@@ -263,10 +274,19 @@ const LinkedInAdsManagement = () => {
           <p className={styles.ctaDescription}>
             Let's create a LinkedIn advertising strategy that connects you with decision-makers
           </p>
-          <Button className={styles.ctaButton}>Start Generating Leads</Button>
+          <CTATriggerButton
+            text={
+              <>
+                Start Generating Leads <ArrowRight className={styles.arrowIcon} />
+              </>
+            }
+            className={`${styles.ctaButton} rounded-4 border-0`}
+          />
         </div>
       </section>
-    </div>
+
+      <CTAModal />
+      </div>
   )
 }
 

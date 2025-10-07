@@ -1,6 +1,8 @@
 import Link from "next/link"
-import { Facebook, Target, TrendingUp, DollarSign, BarChart3, Zap } from "lucide-react"
+import { Facebook, Target, TrendingUp, DollarSign, BarChart3, Zap, ArrowRight } from "lucide-react"
 import styles from "./facebook-ads.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const FacebookAdsManagement = () => {
   const features = [
@@ -49,9 +51,17 @@ const FacebookAdsManagement = () => {
             into loyal customers.
           </p>
           <div className={styles.heroCta}>
-            <Link href="/contact" className={styles.primaryButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Free Strategy Call <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.primaryButton} rounded-4 border-0`}
+            />
+            {/* <Link href="/contact" className={styles.primaryButton}>
               Get Free Strategy Call
-            </Link>
+            </Link> */}
             <Link href="#features" className={styles.secondaryButton}>
               Learn More
             </Link>
@@ -116,10 +126,20 @@ const FacebookAdsManagement = () => {
         <Zap className="w-16 h-16 text-white mb-4" />
         <h2 className={styles.ctaTitle}>Ready to Scale Your Business?</h2>
         <p className={styles.ctaDescription}>Let's create Facebook ad campaigns that deliver real results</p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start Your Campaign <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4 border-0`}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start Your Campaign
-        </Link>
+        </Link> */}
       </section>
+
+      <CTAModal />
     </div>
   )
 }

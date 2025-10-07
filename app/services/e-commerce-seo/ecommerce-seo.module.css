@@ -46,6 +46,11 @@
   color: #6b7280;
   line-height: 1.6;
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .heroSubtitle {
+  color: #cccccc;
 }
 
 .heroCta {
@@ -84,6 +89,16 @@
   background: #f0fdf4;
 }
 
+[data-bs-theme="dark"] .secondaryButton {
+  background: #1a1a2e;
+  color: #10b981;
+  border-color: #10b981;
+}
+
+[data-bs-theme="dark"] .secondaryButton:hover {
+  background: #2a2a3e;
+}
+
 .heroVisual {
   flex: 1;
   min-width: 300px;
@@ -101,6 +116,12 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-bs-theme="dark"] .shoppingCard {
+  background: #1a1a2e;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .trendLine {
@@ -110,6 +131,11 @@
   padding: 1rem 2rem;
   background: #f0fdf4;
   border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .trendLine {
+  background: #2a2a3e;
 }
 
 .stats {
@@ -127,6 +153,12 @@
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-bs-theme="dark"] .statCard {
+  background: #1a1a2e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .statMetric {
@@ -139,6 +171,11 @@
 .statLabel {
   font-size: 1rem;
   color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .statLabel {
+  color: #cccccc;
 }
 
 .features {
@@ -153,6 +190,11 @@
   text-align: center;
   margin-bottom: 3rem;
   color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .sectionTitle {
+  color: #ffffff;
 }
 
 .featuresGrid {
@@ -166,12 +208,21 @@
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease;
 }
 
 .featureCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 40px rgba(5, 150, 105, 0.15);
+}
+
+[data-bs-theme="dark"] .featureCard {
+  background: #1a1a2e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-bs-theme="dark"] .featureCard:hover {
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
 }
 
 .featureIcon {
@@ -184,6 +235,11 @@
   justify-content: center;
   color: #059669;
   margin-bottom: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .featureIcon {
+  background: linear-gradient(135deg, #2a2a3e, #1a1a2e);
 }
 
 .featureTitle {
@@ -191,11 +247,21 @@
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .featureTitle {
+  color: #ffffff;
 }
 
 .featureDescription {
   color: #6b7280;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .featureDescription {
+  color: #cccccc;
 }
 
 .servicesSection {
@@ -204,6 +270,11 @@
   padding: 4rem 1.5rem;
   background: white;
   border-radius: 24px;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .servicesSection {
+  background: #1a1a2e;
 }
 
 .servicesContent {
@@ -223,6 +294,11 @@
   font-weight: 800;
   margin-bottom: 1rem;
   color: #111827;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .servicesTitle {
+  color: #ffffff;
 }
 
 .servicesDescription {
@@ -230,6 +306,11 @@
   color: #6b7280;
   line-height: 1.6;
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .servicesDescription {
+  color: #cccccc;
 }
 
 .servicesList {
@@ -246,6 +327,11 @@
   gap: 0.75rem;
   font-size: 1.125rem;
   color: #374151;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceItem {
+  color: #cccccc;
 }
 
 .servicesVisual {
@@ -264,6 +350,12 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-bs-theme="dark"] .productCard {
+  background: linear-gradient(135deg, #2a2a3e, #1a1a2e);
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
 }
 
 .productInfo {
@@ -276,6 +368,11 @@
   font-weight: 700;
   color: #111827;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .productTitle {
+  color: #ffffff;
 }
 
 .productPrice {
@@ -333,6 +430,15 @@
 .ctaButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.arrowIcon {
+  transition: transform 0.2s ease;
+}
+
+.primaryButton:hover .arrowIcon,
+.ctaButton:hover .arrowIcon {
+  transform: translateX(4px);
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,8 @@
 import { Code2, Cog, Layers, Zap, Shield, Workflow, CheckCircle, ArrowRight, Database, Cloud, Lock, Sparkles } from "lucide-react"
 import styles from "./software-development.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+                                                  
 export default function SoftwareDevelopmentPage() {
   return (
     <main className={styles.page}>
@@ -22,10 +24,18 @@ export default function SoftwareDevelopmentPage() {
                 develop, and deploy enterprise-grade applications that give you a competitive edge in the digital landscape.
               </p>
               <div className={styles.heroActions}>
-                <button className={styles.primaryButton}>
+                      <CTATriggerButton
+                  text={
+                    <>
+                      Start Your Project <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryButton} rounded-4`}
+                />
+                {/* <button className={styles.primaryButton}>
                   Start Your Project
                   <ArrowRight size={20} />
-                </button>
+                </button> */}       
                 <button className={styles.secondaryButton}>View Portfolio</button>
               </div>
               <div className={styles.heroStats}>
@@ -271,13 +281,23 @@ export default function SoftwareDevelopmentPage() {
           <div className={styles.ctaContent}>
             <h2>Ready to Build Something Extraordinary?</h2>
             <p>Let's discuss your project and create software that transforms your business operations.</p>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Schedule a Consultation <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Schedule a Consultation
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

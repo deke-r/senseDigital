@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Instagram, Heart, MessageCircle, Send, Bookmark, TrendingUp, Eye, Target, Sparkles } from "lucide-react"
+import { Instagram, Heart, MessageCircle, Send, Bookmark, TrendingUp, Eye, Target, Sparkles, ArrowRight } from "lucide-react"
 import styles from "./instagram-ads.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const InstagramAdsManagement = () => {
   return (
@@ -23,11 +25,19 @@ const InstagramAdsManagement = () => {
               action. We create Instagram campaigns that convert.
             </p>
             <div className={styles.heroButtons}>
-              <Button className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Launch Campaign <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />            
+              {/* <Button className={styles.primaryButton}>
                 <Sparkles className="w-5 h-5 mr-2" />
                 Launch Campaign
-              </Button>
-              <Button className={styles.secondaryButton}>View Portfolio</Button>
+              </Button> */}
+              <Button className={`${styles.secondaryButton} rounded-4 border-0`}>View Portfolio</Button> 
             </div>
           </div>
           <div className={styles.heroVisual}>
@@ -220,12 +230,22 @@ const InstagramAdsManagement = () => {
           <p className={styles.ctaDescription}>
             Let's create Instagram ads that capture attention and drive real business results
           </p>
-          <Button className={styles.ctaButton}>
+          <CTATriggerButton
+            text={
+              <>
+                Start Your Campaign <ArrowRight className={styles.arrowIcon} />
+              </>
+            }
+            className={`${styles.ctaButton} rounded-4 border-0`}
+          />
+          {/* <Button className={styles.ctaButton}>
             <Instagram className="w-5 h-5 mr-2" />
             Start Your Campaign
-          </Button>
+          </Button> */}
         </div>
       </section>
+
+      <CTAModal />
     </div>
   )
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { Building2, Users, Award, Shield, Star, CheckCircle } from "lucide-react";
+import { Building2, Users, Award, Shield, Star, CheckCircle, ArrowRight } from "lucide-react";
 import styles from "../styles/components/TrustedSection.module.css";
+import CTATriggerButton from "./CTATriggerButton";
 
 const TrustedSection = () => {
   const trustedCompanies = [
@@ -169,10 +170,18 @@ const TrustedSection = () => {
               Let's discuss how we can help transform your business with our proven solutions.
             </p>
             <div className={styles.ctaButtons}>
-              <button className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Your Project <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-pill`}
+              />
+              {/* <button className={styles.primaryButton}>
                 Start Your Project
                 <Star size={16} />
-              </button>
+              </button> */}   
               <button className={styles.secondaryButton}>
                 View Case Studies
               </button>

@@ -2,6 +2,8 @@ import React from 'react'
 import Link from "next/link"
 import { FileText, Search, Target, Zap, CheckCircle, ArrowRight, BarChart3, Globe, Code, Eye } from "lucide-react"
 import styles from "./on-page-seo.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const OnPageSeo = () => {
   const features = [
@@ -57,9 +59,17 @@ const OnPageSeo = () => {
               Our comprehensive on-page SEO strategies drive organic traffic and boost conversions.
             </p>
             <div className={styles.heroCta}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get Free SEO Audit <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4`}
+              />
+              {/* <Link href="/contact" className={styles.primaryButton}>
                 Get Free SEO Audit
-              </Link>
+              </Link> */}
               <Link href="#services" className={styles.secondaryButton}>
                 View Services
               </Link>
@@ -165,10 +175,20 @@ const OnPageSeo = () => {
         <p className={styles.ctaDescription}>
           Get a free on-page SEO audit and discover opportunities to improve your rankings
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start Your SEO Journey <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4`}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start Your SEO Journey
-        </Link>
+        </Link> */}
       </section>
+
+      <CTAModal />
     </div>
   )
 }

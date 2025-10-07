@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from "next/link"
-import { MapPin, Users, Star, CheckCircle, ArrowRight, BarChart3, Target, Globe, Phone, Clock } from "lucide-react"
+import { MapPin, Users, Star, CheckCircle, BarChart3, Target, Globe, Phone, Clock, ArrowRight } from "lucide-react"
 import styles from "./local-seo.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const LocalSeo = () => {
   const features = [
@@ -57,9 +59,17 @@ const LocalSeo = () => {
               Our local SEO strategies help you get found by nearby customers when they need your services.
             </p>
             <div className={styles.heroCta}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get Local SEO Audit <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Link href="/contact" className={styles.primaryButton}>
                 Get Local SEO Audit
-              </Link>
+              </Link> */}     
               <Link href="#services" className={styles.secondaryButton}>
                 View Services
               </Link>
@@ -165,10 +175,20 @@ const LocalSeo = () => {
         <p className={styles.ctaDescription}>
           Get a free local SEO audit and discover opportunities to attract more local customers
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start Local SEO Today <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4 border-0`}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start Local SEO Today
-        </Link>
+        </Link> */}
       </section>
+
+      <CTAModal />
     </div>
   )
 }

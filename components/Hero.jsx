@@ -4,12 +4,13 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Clock } from 'lucide-react
 import { useDarkMode } from '../context/DarkModeContext'
 import styles from '../styles/components/hero.module.css'
 
+import CTATriggerButton from './CTATriggerButton'
+
 const Hero = () => {
   const { isDarkMode } = useDarkMode()
-  
   const features = [
     "Free Consultation",
-    "24/7 Support", 
+    "24/7 Support",
     "Money-back Guarantee",
     "Expert Team"
   ]
@@ -30,14 +31,14 @@ const Hero = () => {
                 <Star className={styles.starIcon} />
                 <span>Trusted by 500+ Businesses</span>
               </div>
-              
+
               <h1 className={styles.heroTitle}>
-                Transform Your Business with 
+                Transform Your Business with
                 <span className={styles.gradientText}> Digital Excellence</span>
               </h1>
-              
+
               <p className={styles.heroSubtitle}>
-                We're your strategic partner for digital growth. From cutting-edge web development 
+                We're your strategic partner for digital growth. From cutting-edge web development
                 to powerful marketing campaigns, we deliver results that matter.
               </p>
 
@@ -60,17 +61,22 @@ const Hero = () => {
               </div>
 
               <div className={styles.ctaButtons}>
-                <button className={styles.primaryBtn}>
-                  Get Free Quote
-                  <ArrowRight className={styles.arrowIcon} />
-                </button>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Get Free Quote <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-4`}
+                />
+
                 <button className={styles.secondaryBtn}>
                   View Our Work
                 </button>
               </div>
             </div>
           </div>
-          
+
           <div className="col-lg-5 col-md-12">
             <div className={styles.heroImage}>
               <div className={styles.imageContainer}>

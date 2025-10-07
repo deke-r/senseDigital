@@ -1,6 +1,8 @@
 import { Users, Target, TrendingUp, BarChart3, Heart, Star, ArrowRight, Sparkles, Camera, Globe, Megaphone, Award } from "lucide-react"
 import styles from "./influencer-marketing.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+            
 export default function InfluencerMarketingPage() {
   return (
     <main className={styles.page}>
@@ -36,10 +38,18 @@ export default function InfluencerMarketingPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Influencer Campaign <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-3`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Start Influencer Campaign
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
                 <button className={styles.secondaryBtn}>View Case Studies</button>
               </div>
             </div>
@@ -380,13 +390,23 @@ export default function InfluencerMarketingPage() {
               <h2>Ready to Amplify Your Brand?</h2>
               <p>Start your influencer marketing journey with authentic partnerships that drive real results.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Launch Your Campaign <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Launch Your Campaign
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

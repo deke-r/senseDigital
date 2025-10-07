@@ -2,6 +2,8 @@ import React from 'react'
 import Link from "next/link"
 import { Users, Clock, DollarSign, CheckCircle, ArrowRight, BarChart3, Target, Shield, Zap, TrendingUp } from "lucide-react"
 import styles from "./seo-outsourcing.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const SearchEngineOptimizationOutsourcingSeo = () => {
   const features = [
@@ -57,9 +59,17 @@ const SearchEngineOptimizationOutsourcingSeo = () => {
               Our comprehensive SEO outsourcing services deliver results while saving you time and money.
             </p>
             <div className={styles.heroCta}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get SEO Quote <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Link href="/contact" className={styles.primaryButton}>
                 Get SEO Quote
-              </Link>
+              </Link> */}     
               <Link href="#services" className={styles.secondaryButton}>
                 View Services
               </Link>
@@ -165,11 +175,21 @@ const SearchEngineOptimizationOutsourcingSeo = () => {
         <p className={styles.ctaDescription}>
           Get a free SEO outsourcing consultation and discover how we can help grow your business
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start SEO Outsourcing <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4 border-0 `}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start SEO Outsourcing
-        </Link>
+        </Link> */}
       </section>
-    </div>
+
+      <CTAModal />
+      </div>
   )
 }
 

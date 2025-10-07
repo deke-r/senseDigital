@@ -2,6 +2,8 @@ import React from 'react'
 import Link from "next/link"
 import { Link as LinkIcon, TrendingUp, Users, Globe, CheckCircle, ArrowRight, BarChart3, Target, Zap, Share2 } from "lucide-react"
 import styles from "./off-page-seo.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const OffPageSeo = () => {
   const features = [
@@ -57,9 +59,17 @@ const OffPageSeo = () => {
               Our comprehensive approach drives quality backlinks and boosts your search rankings.
             </p>
             <div className={styles.heroCta}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get Free Authority Audit <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Link href="/contact" className={styles.primaryButton}>
                 Get Free Authority Audit
-              </Link>
+              </Link> */}     
               <Link href="#services" className={styles.secondaryButton}>
                 View Services
               </Link>
@@ -165,10 +175,20 @@ const OffPageSeo = () => {
         <p className={styles.ctaDescription}>
           Get a free off-page SEO audit and discover opportunities to boost your domain authority
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start Building Authority <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4 border-0`}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start Building Authority
-        </Link>
+        </Link> */}
       </section>
+
+      <CTAModal />
     </div>
   )
 }

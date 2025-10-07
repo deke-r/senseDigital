@@ -7,13 +7,12 @@ import SuccessStories from '@/components/SuccessStories'
 import TrustedSection from '@/components/TrustedSection'
 import WorkCarousel from '@/components/WorkCarousel'
 import CTASection from '@/components/CTASection'
+import CTAModal from '@/components/CTAmodal'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-
-      
       {/* Enhanced Hero Section */}
       <Hero/>
       
@@ -37,6 +36,9 @@ const page = () => {
       
       {/* Call to Action */}
       <CTASection/>
+      
+      {/* Modal Component */}
+      <CTAModal/>
     </>
   )
 }

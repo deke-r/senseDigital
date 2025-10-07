@@ -18,6 +18,7 @@ import {
   Rocket
 } from "lucide-react";
 import styles from "../styles/components/SolutionsSection.module.css";
+import CTATriggerButton from "./CTATriggerButton";
 
 const SolutionsSection = () => {
   const [activeService, setActiveService] = useState(0);
@@ -193,10 +194,18 @@ const SolutionsSection = () => {
                 Learn More
                 <ArrowRight size={16} />
               </a>
-              <button className={styles.getQuote}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get Free Quote <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.getQuote} rounded-4`}
+              />
+              {/* <button className={styles.getQuote}>
                 Get Free Quote
                 <Zap size={16} />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

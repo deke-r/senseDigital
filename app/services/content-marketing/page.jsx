@@ -1,5 +1,7 @@
-import { FileText, PenTool, Calendar, Target, BarChart3, Users, ArrowRight, Sparkles, Clock, Globe, Megaphone } from "lucide-react"
+import { FileText, PenTool, Calendar, Target, BarChart3, Users, ArrowRight, Sparkles, Globe, Megaphone } from "lucide-react"
 import styles from "./content-marketing.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 export default function ContentMarketingPage() {
   return (
@@ -36,10 +38,18 @@ export default function ContentMarketingPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Content Strategy <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-4 border-0`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Start Content Strategy
                   <ArrowRight size={18} />
-                </button>
+                </button> */}   
                 <button className={styles.secondaryBtn}>View Content Gallery</button>
               </div>
             </div>
@@ -312,13 +322,23 @@ export default function ContentMarketingPage() {
               <h2>Ready to Transform Your Marketing with Content?</h2>
               <p>Get a free content audit and discover how strategic content can drive your growth.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Free Content Audit <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4 border-0`}
+            />
+            {/* <button className={styles.ctaButton}>
               Get Free Content Audit
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

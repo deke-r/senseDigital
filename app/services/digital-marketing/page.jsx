@@ -1,5 +1,8 @@
 import { TrendingUp, Search, Users, Target, BarChart3, Globe, ArrowRight, Sparkles } from "lucide-react"
 import styles from "./digital-marketing.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+
 
 export default function DigitalMarketingPage() {
   return (
@@ -36,10 +39,18 @@ export default function DigitalMarketingPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Get Free Audit <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-4`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Get Free Audit
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
                 <button className={styles.secondaryBtn}>View Success Stories</button>
               </div>
             </div>
@@ -214,15 +225,25 @@ export default function DigitalMarketingPage() {
           <div className={styles.ctaBox}>
             <div className={styles.ctaContent}>
               <h2>Ready to Accelerate Your Growth?</h2>
-              <p>Get a free marketing audit and discover untapped opportunities for your business.</p>
+              <p>Get a marketing audit and discover untapped opportunities for your business.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Claim Your Audit <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Claim Your Free Audit
               <ArrowRight size={20} />
-            </button>
+            </button> */}         
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

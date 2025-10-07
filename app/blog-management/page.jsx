@@ -1,6 +1,8 @@
 import { FileText, Calendar, Search, Users, BarChart3, PenTool, Globe, ArrowRight, Sparkles, Clock, Target, TrendingUp } from "lucide-react"
 import styles from "./blog-management.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+          
 export default function BlogManagementPage() {
   return (
     <main className={styles.page}>
@@ -36,10 +38,19 @@ export default function BlogManagementPage() {
                 </div>
               </div>
               <div className={styles.actions}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Blog Strategy <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-3`}
+                />
+                {/* <button className={styles.primaryBtn}>
                 <button className={styles.primaryBtn}>
                   Start Blog Strategy
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
                 <button className={styles.secondaryBtn}>View Content Samples</button>
               </div>
             </div>
@@ -312,13 +323,23 @@ export default function BlogManagementPage() {
               <h2>Ready to Transform Your Blog?</h2>
               <p>Get a free blog audit and discover how professional management can boost your content strategy.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Free Blog Audit <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Get Free Blog Audit
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

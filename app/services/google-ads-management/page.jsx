@@ -11,8 +11,11 @@ import {
   Rocket,
   DollarSign,
   MousePointerClick,
+  ArrowRight,
 } from "lucide-react"
 import styles from "./google-ads.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const GoogleAdsManagement = () => {
   return (
@@ -34,10 +37,18 @@ const GoogleAdsManagement = () => {
               Ads experts maximize your ROI with data-driven campaigns.
             </p>
             <div className={styles.heroButtons}>
-              <Button className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Campaign <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Button className={styles.primaryButton}>
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Campaign
-              </Button>
+              </Button> */}
               <Button className={styles.secondaryButton}>View Case Studies</Button>
             </div>
             <div className={styles.heroStats}>
@@ -225,9 +236,18 @@ const GoogleAdsManagement = () => {
           <p className={styles.ctaDescription}>
             Let's create a Google Ads strategy that drives real results for your business
           </p>
-          <Button className={styles.ctaButton}>Get Free Campaign Audit</Button>
+          <CTATriggerButton
+            text={
+              <>
+                Get Free Campaign Audit <ArrowRight className={styles.arrowIcon} />
+              </>
+            }
+            className={`${styles.ctaButton} rounded-4 border-0`}
+          />
         </div>
       </section>
+
+      <CTAModal />
     </div>
   )
 }

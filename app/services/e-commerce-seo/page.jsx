@@ -1,6 +1,8 @@
 import Link from "next/link"
-import { ShoppingCart, TrendingUp, Search, Package, Target } from "lucide-react"
+import { ShoppingCart, TrendingUp, Search, Package, Target, ArrowRight } from "lucide-react"
 import styles from "./ecommerce-seo.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 const ECommerceSeo = () => {
   const features = [
@@ -54,9 +56,17 @@ const ECommerceSeo = () => {
               attract qualified buyers, and dominate search results.
             </p>
             <div className={styles.heroCta}>
-              <Link href="/contact" className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Get Free E-commerce Audit <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-4 border-0`}
+              />
+              {/* <Link href="/contact" className={styles.primaryButton}>
                 Get Free E-commerce Audit
-              </Link>
+              </Link> */}
               <Link href="#services" className={styles.secondaryButton}>
                 View Services
               </Link>
@@ -135,11 +145,21 @@ const ECommerceSeo = () => {
         <p className={styles.ctaDescription}>
           Get a free e-commerce SEO audit and discover opportunities to increase your sales
         </p>
-        <Link href="/contact" className={styles.ctaButton}>
+        <CTATriggerButton
+          text={
+            <>
+              Start Growing Today <ArrowRight className={styles.arrowIcon} />
+            </>
+          }
+          className={`${styles.ctaButton} rounded-4 border-0`}
+        />
+        {/* <Link href="/contact" className={styles.ctaButton}>
           Start Growing Today
-        </Link>
+        </Link> */}
       </section>
-    </div>
+
+      <CTAModal />
+      </div>
   )
 }
 

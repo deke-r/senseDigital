@@ -76,7 +76,7 @@
     transition: color 0.3s ease;
   }
   
-  [content-bs-theme="dark"] .title {
+  [data-bs-theme="dark"] .title {
     color: #ffffff;
   }
   
@@ -247,6 +247,7 @@
   .servicesHeader {
     text-align: center;
     margin-bottom: 60px;
+  }
   
   .servicesHeader h2 {
     font-size: 42px;
@@ -427,7 +428,7 @@
   
   .strategyCard h3 {
     font-size: 22px;
-    font-size: 700;
+    font-weight: 700;
     margin: 0 0 12px 0;
     color: #1a1a1a;
     transition: color 0.3s ease;
@@ -445,7 +446,7 @@
   }
   
   [data-bs-theme="dark"] .strategyCard p {
-    color: #cccc;
+    color: #cccccc;
   }
   
   .strategyCard ul {
@@ -813,4 +814,35 @@
       text-align: center;
     }
   }
+
+
+
+.servicesHeader {
+  text-align: center;
+  margin-bottom: 60px;
 }
+
+.servicesHeader h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+
+
+.strategyCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+
+
+[data-bs-theme="dark"] .strategyCard p {
+  color: #cccccc;
+}
+

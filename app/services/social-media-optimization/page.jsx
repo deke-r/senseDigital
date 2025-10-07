@@ -1,5 +1,7 @@
 import { Users, TrendingUp, Heart, Share2, BarChart3, Globe, ArrowRight, Sparkles, Target, Calendar, Image } from "lucide-react"
 import styles from "./social-media-optimization.module.css"
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
 
 export default function SocialMediaOptimizationPage() {
   return (
@@ -36,10 +38,18 @@ export default function SocialMediaOptimizationPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start SMO Campaign <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-3`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Start SMO Campaign
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
                 <button className={styles.secondaryBtn}>View Portfolio</button>
               </div>
             </div>
@@ -294,13 +304,23 @@ export default function SocialMediaOptimizationPage() {
               <h2>Ready to Boost Your Social Media Presence?</h2>
               <p>Get a free social media audit and discover untapped opportunities for growth.</p>
             </div>
-            <button className={styles.ctaButton}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Free Social Media Audit <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>
               Get Free Social Media Audit
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

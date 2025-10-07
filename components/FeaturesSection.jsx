@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
-import { Code, Palette, Search, Smartphone, BarChart3, Shield } from 'lucide-react'
+import { Code, Palette, Search, Smartphone, BarChart3, Shield, ArrowRight } from 'lucide-react'
 import styles from '../styles/components/features-section.module.css'
+import CTATriggerButton from './CTATriggerButton'
 
 const FeaturesSection = () => {
   const features = [
@@ -86,9 +87,15 @@ const FeaturesSection = () => {
             <div className={styles.ctaSection}>
               <h3>Ready to Get Started?</h3>
               <p>Let's discuss your project and create something amazing together.</p>
-              <button className={styles.ctaButton}>
-                Start Your Project
-              </button>
+              
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Your Project <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.ctaButton} rounded-4`}
+              />
             </div>
           </div>
         </div>

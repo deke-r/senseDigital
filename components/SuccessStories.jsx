@@ -4,6 +4,7 @@ import React from "react";
 import { Star, TrendingUp, Users, Award, CheckCircle, Quote, ArrowRight } from "lucide-react";
 import { useDarkMode } from "../context/DarkModeContext";
 import styles from "../styles/components/successStories.module.css";
+import CTATriggerButton from "./CTATriggerButton";
 
 const SuccessStories = () => {
   const { isDarkMode } = useDarkMode();
@@ -299,10 +300,18 @@ const SuccessStories = () => {
               Join hundreds of businesses that have transformed their digital presence with our expertise.
             </p>
             <div className={styles.ctaButtons}>
-              <button className={styles.primaryButton}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Your Project <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryButton} rounded-pill`}
+              />
+              {/* <button className={styles.primaryButton}>
                 Start Your Project
                 <ArrowRight size={16} />
-              </button>
+              </button> */}       
               <button className={styles.secondaryButton}>
                 View All Case Studies
               </button>

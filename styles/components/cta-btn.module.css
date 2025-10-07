@@ -3,7 +3,7 @@
   background: linear-gradient(45deg, var(--primary-color), #0056b3);
   color: #ffffff !important;
   padding: 12px 25px;
-  border-radius: 25px;
+  border-radius: 25px !important;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;

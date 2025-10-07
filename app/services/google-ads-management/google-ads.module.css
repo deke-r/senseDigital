@@ -99,33 +99,42 @@
 }
 
 .primaryButton {
-  background: #fbbc04;
-  color: #1a73e8;
+  background: #fbbc04 !important;
+  color: #1a73e8 !important;
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1.5rem 2rem;
   height: auto;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease;
 }
 
 .primaryButton:hover {
-  background: #f9ab00;
+  background: #f9ab00 !important;
+  color: #1a73e8 !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(251, 188, 4, 0.3);
 }
 
 .secondaryButton {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1.5rem 2rem;
   height: auto;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease;
 }
 
 .secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+  transform: translateY(-2px);
 }
 
 .heroStats {
@@ -550,17 +559,22 @@
 }
 
 .ctaButton {
-  background: #fbbc04;
-  color: #1a73e8;
+  background: #fbbc04 !important;
+  color: #1a73e8 !important;
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1.5rem 2.5rem;
   height: auto;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
-  background: #f9ab00;
+  background: #f9ab00 !important;
+  color: #1a73e8 !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(251, 188, 4, 0.3);
 }
 
 @media (max-width: 768px) {

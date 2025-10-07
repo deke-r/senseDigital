@@ -1,5 +1,7 @@
-import { Palette, Layers, Sparkles, Pen, ImageIcon, Layout } from "lucide-react"
+import { Palette, Layers, Sparkles, Pen, ImageIcon, Layout, ArrowRight } from "lucide-react"
+import CTATriggerButton from "@/components/CTATriggerButton"
 import styles from "./graphic-designing.module.css"
+import CTAModal from "@/components/CTAmodal"
 
 export default function GraphicDesigningPage() {
   return (
@@ -19,7 +21,15 @@ export default function GraphicDesigningPage() {
                 we craft designs that leave lasting impressions.
               </p>
               <div className={styles.heroActions}>
-                <button className={styles.primaryBtn}>Start Your Project</button>
+                {/* <button className={styles.primaryBtn}>Start Your Project</button> */}
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Your Project <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-4`}
+                />
                 <button className={styles.secondaryBtn}>View Portfolio</button>
               </div>
             </div>
@@ -149,10 +159,20 @@ export default function GraphicDesigningPage() {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>Ready to Bring Your Vision to Life?</h2>
             <p className={styles.ctaSubtitle}>Let's create something extraordinary together</p>
-            <button className={styles.ctaButton}>Get Started Today</button>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Started Today <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaButton} rounded-4`}
+            />
+            {/* <button className={styles.ctaButton}>Get Started Today</button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

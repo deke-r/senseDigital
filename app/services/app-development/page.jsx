@@ -1,6 +1,8 @@
 import { Smartphone, Tablet, Watch, Zap, Users, Shield, ArrowRight, Star } from "lucide-react"
 import styles from "./app-dev.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+                  
 export default function AppDevelopmentPage() {
   return (
     <main className={styles.page}>
@@ -34,10 +36,18 @@ export default function AppDevelopmentPage() {
               </div>
             </div>
             <div className={styles.actions}>
-              <button className={styles.primaryBtn}>
+              <CTATriggerButton
+                text={
+                  <>
+                    Start Your App <ArrowRight className={styles.arrowIcon} />
+                  </>
+                }
+                className={`${styles.primaryBtn} rounded-4`}
+              />
+              {/* <button className={styles.primaryBtn}>
                 Start Your App
                 <ArrowRight size={18} />
-              </button>
+              </button> */}
               <button className={styles.secondaryBtn}>View App Portfolio</button>
             </div>
           </div>
@@ -130,13 +140,23 @@ export default function AppDevelopmentPage() {
           <div className={styles.ctaBox}>
             <h2>Ready to Build Your Mobile App?</h2>
             <p>Let's turn your app idea into a reality that users will love.</p>
-            <button className={styles.ctaBtn}>
+            <CTATriggerButton
+              text={
+                <>
+                  Schedule a Consultation <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaBtn} rounded-4`}
+            />
+            {/* <button className={styles.ctaBtn}>
               Schedule a Consultation
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }

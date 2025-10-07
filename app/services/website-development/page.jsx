@@ -1,6 +1,8 @@
 import { Globe, Palette, Smartphone, Rocket, TrendingUp, Shield, ArrowRight, Check } from "lucide-react"
 import styles from "./website.module.css"
-
+import CTATriggerButton from "@/components/CTATriggerButton"
+import CTAModal from "@/components/CTAmodal"
+          
 export default function WebsiteDevelopmentPage() {
   return (
     <main className={styles.page}>
@@ -31,10 +33,18 @@ export default function WebsiteDevelopmentPage() {
                 </div>
               </div>
               <div className={styles.actions}>
-                <button className={styles.primaryBtn}>
+                <CTATriggerButton
+                  text={
+                    <>
+                      Start Your Website <ArrowRight className={styles.arrowIcon} />
+                    </>
+                  }
+                  className={`${styles.primaryBtn} rounded-4`}
+                />
+                {/* <button className={styles.primaryBtn}>
                   Start Your Website
                   <ArrowRight size={18} />
-                </button>
+                </button> */}         
                 <button className={styles.secondaryBtn}>View Portfolio</button>
               </div>
             </div>
@@ -217,13 +227,23 @@ export default function WebsiteDevelopmentPage() {
           <div className={styles.ctaContent}>
             <h2>Ready to Launch Your Website?</h2>
             <p>Let's create a website that represents your brand and drives results.</p>
-            <button className={styles.ctaBtn}>
+            <CTATriggerButton
+              text={
+                <>
+                  Get Your Free Quote <ArrowRight className={styles.arrowIcon} />
+                </>
+              }
+              className={`${styles.ctaBtn} rounded-4`}
+            />
+            {/* <button className={styles.ctaBtn}>
               Get Your Free Quote
               <ArrowRight size={20} />
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
+
+      <CTAModal />
     </main>
   )
 }
