@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Mobile App Development Services – MetaSense",
+  description:
+    "MetaSense provides end-to-end mobile app development services for iOS and Android. Build innovative, scalable, and user-friendly applications for your business.",
+  keywords:
+    "mobile app development, iOS app development, Android app development, cross-platform apps, custom mobile applications, MetaSense apps, app development services, business app solutions",
+  alternates: {
+    canonical: "https://metasense.in/services/app-development",
+  },
+  openGraph: {
+    title: "Mobile App Development Services – MetaSense",
+    description:
+      "End-to-end mobile app development by MetaSense. Innovative, scalable, and user-friendly apps for iOS and Android to grow your business.",
+    url: "https://metasense.in/services/app-development",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-app-development.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense App Development",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile App Development Services – MetaSense",
+    description:
+      "MetaSense offers professional mobile app development for iOS and Android. Create scalable, user-friendly, and innovative apps for your business.",
+    images: ["https://metasense.in/og-app-development.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { Smartphone, Tablet, Watch, Zap, Users, Shield, ArrowRight, Star } from "lucide-react"
 import styles from "./app-dev.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

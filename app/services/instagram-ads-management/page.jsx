@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Instagram Ads Management – MetaSense",
+  description:
+    "Boost your brand visibility and engagement with MetaSense Instagram Ads management. Expert campaigns optimized for leads, traffic, and ROI.",
+  keywords:
+    "Instagram Ads management, social media advertising, MetaSense Instagram campaigns, lead generation, targeted Instagram ads, paid social marketing, Instagram PPC, Instagram marketing strategy, business advertising on Instagram, MetaSense marketing services",
+  alternates: {
+    canonical: "https://metasense.in/services/instagram-ads-management",
+  },
+  openGraph: {
+    title: "Instagram Ads Management – MetaSense",
+    description:
+      "MetaSense provides professional Instagram Ads management services to increase brand reach, engagement, and conversions for your business.",
+    url: "https://metasense.in/services/instagram-ads-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-instagram-ads.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Instagram Ads Management",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Instagram Ads Management – MetaSense",
+    description:
+      "Maximize reach and engagement with MetaSense Instagram Ads campaigns. Targeted social media advertising with measurable ROI.",
+    images: ["https://metasense.in/og-instagram-ads.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Instagram, Heart, MessageCircle, Send, Bookmark, TrendingUp, Eye, Target, Sparkles, ArrowRight } from "lucide-react"

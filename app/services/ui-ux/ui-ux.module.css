@@ -69,10 +69,15 @@
 
 .heroSubtitle {
   font-size: 20px;
-  color: #b0b0b0;
+  color: #666666;
   line-height: 1.6;
   margin-bottom: 40px;
   max-width: 600px;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .heroSubtitle {
+  color: #b0b0b0;
 }
 
 .heroStats {
@@ -94,9 +99,14 @@
 
 .statLabel {
   font-size: 14px;
-  color: #888;
+  color: #888888;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .statLabel {
+  color: #888;
 }
 
 .ctaBtn {
@@ -125,19 +135,30 @@
 .mockup {
   width: 400px;
   height: 500px;
-  background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
   border-radius: 24px;
   padding: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   position: relative;
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .mockup {
+  background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .mockupScreen {
   width: 100%;
   height: 100%;
-  background: #0f0f1e;
+  background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .mockupScreen {
+  background: #0f0f1e;
 }
 
 .mockupHeader {
@@ -180,6 +201,11 @@
 
 .services {
   padding: 100px 0;
+  background: #ffffff;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .services {
   background: #0f0f1e;
 }
 
@@ -188,6 +214,12 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .sectionTitle {
+  color: white;
 }
 
 .servicesGrid {
@@ -197,16 +229,26 @@
 }
 
 .serviceCard {
-  background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+  background: #f8fafc;
   padding: 40px;
   border-radius: 20px;
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceCard {
+  background: linear-gradient(135deg, #1a1a2e, #2d2d44);
   border: 1px solid rgba(138, 43, 226, 0.2);
-  transition: transform 0.3s, border-color 0.3s;
 }
 
 .serviceCard:hover {
   transform: translateY(-8px);
   border-color: rgba(138, 43, 226, 0.6);
+  box-shadow: 0 12px 40px rgba(138, 43, 226, 0.15);
+}
+
+[data-bs-theme="dark"] .serviceCard:hover {
+  box-shadow: 0 12px 40px rgba(138, 43, 226, 0.3);
 }
 
 .icon {
@@ -220,23 +262,44 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceCard h3 {
+  color: white;
 }
 
 .serviceCard p {
-  color: #b0b0b0;
+  color: #666666;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .serviceCard p {
+  color: #b0b0b0;
 }
 
 .process {
   padding: 100px 0;
+  background: #f8fafc;
+  transition: background 0.3s ease;
+}
+
+[data-bs-theme="dark"] .process {
   background: #0a0a0a;
 }
 
 .processIntro {
   text-align: center;
-  color: #888;
+  color: #666666;
   font-size: 18px;
   margin-bottom: 60px;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processIntro {
+  color: #888;
 }
 
 .processGrid {
@@ -246,10 +309,17 @@
 }
 
 .processCard {
-  background: #1a1a2e;
+  background: #ffffff;
   padding: 32px;
   border-radius: 16px;
   border-left: 4px solid #8a2be2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processCard {
+  background: #1a1a2e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .processNumber {
@@ -264,11 +334,22 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processCard h4 {
+  color: white;
 }
 
 .processCard p {
-  color: #b0b0b0;
+  color: #666666;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .processCard p {
+  color: #b0b0b0;
 }
 
 .finalCta {
@@ -284,12 +365,14 @@
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 16px;
+  color: white;
 }
 
 .ctaBox p {
   font-size: 20px;
   margin-bottom: 32px;
   opacity: 0.95;
+  color: white;
 }
 
 .ctaButton {
@@ -307,6 +390,12 @@
 .ctaButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
 }
 
 @media (max-width: 768px) {

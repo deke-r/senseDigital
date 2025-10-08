@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Influencer Marketing Services – MetaSense",
+  description:
+    "Amplify your brand reach with MetaSense Influencer Marketing services. Connect with top influencers to drive engagement and sales.",
+  keywords:
+    "influencer marketing, brand promotion, social media influencers, influencer campaigns, MetaSense services, digital marketing, online brand promotion, influencer strategy, influencer outreach",
+  alternates: {
+    canonical: "https://metasense.in/services/influencer-marketing",
+  },
+  openGraph: {
+    title: "Influencer Marketing Services – MetaSense",
+    description:
+      "MetaSense connects your brand with the right influencers to enhance engagement, reach, and conversions across social media platforms.",
+    url: "https://metasense.in/services/influencer-marketing",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-influencer-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Influencer Marketing",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Influencer Marketing Services – MetaSense",
+    description:
+      "Drive engagement and sales with MetaSense Influencer Marketing. Partner with top influencers for maximum brand impact.",
+    images: ["https://metasense.in/og-influencer-marketing.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { Users, Target, TrendingUp, BarChart3, Heart, Star, ArrowRight, Sparkles, Camera, Globe, Megaphone, Award } from "lucide-react"
 import styles from "./influencer-marketing.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

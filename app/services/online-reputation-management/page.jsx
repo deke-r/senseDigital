@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Online Reputation Management – MetaSense",
+  description:
+    "Protect and enhance your brand image with MetaSense Online Reputation Management services. Monitor, manage, and improve your business reputation online.",
+  keywords:
+    "online reputation management, ORM, brand reputation, reputation monitoring, reputation repair, MetaSense services, manage online reviews, business reputation, online image management",
+  alternates: {
+    canonical: "https://metasense.in/services/online-reputation-management",
+  },
+  openGraph: {
+    title: "Online Reputation Management – MetaSense",
+    description:
+      "MetaSense helps businesses monitor and improve their online reputation, ensuring positive brand presence across platforms.",
+    url: "https://metasense.in/services/online-reputation-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-online-reputation-management.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Online Reputation Management",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Online Reputation Management – MetaSense",
+    description:
+      "Enhance and protect your brand image online with MetaSense ORM services.",
+    images: ["https://metasense.in/og-online-reputation-management.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Shield, Search, AlertTriangle, BarChart3, Users, Globe, ArrowRight, Sparkles, Star, Mic, Image } from "lucide-react"
 import styles from "./online-reputation-management.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

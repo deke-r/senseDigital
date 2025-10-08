@@ -208,11 +208,11 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link href="/careers" className={`nav-link ${styles.navLink}`}>
                   Careers
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
             {/* Right Menu */}

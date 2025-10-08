@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Social Media Optimization (SMO) – MetaSense",
+  description:
+    "Enhance your brand presence on social media platforms with MetaSense SMO services. Increase engagement, followers, and drive traffic to your website.",
+  keywords:
+    "social media optimization, SMO services, social media marketing, MetaSense SMO, increase social engagement, social media strategy, Facebook optimization, Instagram optimization, LinkedIn optimization",
+  alternates: {
+    canonical: "https://metasense.in/services/social-media-optimization",
+  },
+  openGraph: {
+    title: "Social Media Optimization (SMO) – MetaSense",
+    description:
+      "MetaSense provides professional SMO services to boost your social media visibility, engagement, and brand awareness.",
+    url: "https://metasense.in/services/social-media-optimization",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-smo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Social Media Optimization Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Media Optimization (SMO) – MetaSense",
+    description:
+      "Boost your social media presence and engagement with MetaSense SMO services for Facebook, Instagram, LinkedIn, and more.",
+    images: ["https://metasense.in/og-smo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { Users, TrendingUp, Heart, Share2, BarChart3, Globe, ArrowRight, Sparkles, Target, Calendar, Image } from "lucide-react"
 import styles from "./social-media-optimization.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

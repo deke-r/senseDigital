@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Website Development Services – MetaSense",
+  description:
+    "Build responsive, high-performance websites with MetaSense. Our expert team delivers custom web development solutions to grow your business online.",
+  keywords:
+    "website development, web development services, responsive websites, custom web solutions, MetaSense development, front-end development, back-end development, full-stack development, business website development",
+  alternates: {
+    canonical: "https://metasense.in/services/website-development",
+  },
+  openGraph: {
+    title: "Website Development Services – MetaSense",
+    description:
+      "MetaSense provides professional website development services, creating responsive, SEO-friendly, and high-performing websites for your business.",
+    url: "https://metasense.in/services/website-development",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-website-development.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Website Development",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development Services – MetaSense",
+    description:
+      "Grow your online presence with MetaSense Website Development. Expert custom websites built for performance, SEO, and scalability.",
+    images: ["https://metasense.in/og-website-development.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { Globe, Palette, Smartphone, Rocket, TrendingUp, Shield, ArrowRight, Check } from "lucide-react"
 import styles from "./website.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

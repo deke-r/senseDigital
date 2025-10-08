@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Blog Management Services – MetaSense",
+  description:
+    "Boost your brand authority and engagement with MetaSense Blog Management services. We handle content creation, publishing, and strategy for your business blog.",
+  keywords:
+    "blog management, content creation, blog strategy, blog publishing, MetaSense services, business blogging, SEO blogs, blog optimization, online content management",
+  alternates: {
+    canonical: "https://metasense.in/blog-management",
+  },
+  openGraph: {
+    title: "Blog Management Services – MetaSense",
+    description:
+      "MetaSense helps businesses create, publish, and manage blogs effectively to enhance online visibility and engagement.",
+    url: "https://metasense.in/blog-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-blog-management.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Blog Management",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog Management Services – MetaSense",
+    description:
+      "MetaSense offers end-to-end blog management services to improve brand authority and audience engagement.",
+    images: ["https://metasense.in/og-blog-management.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { FileText, Calendar, Search, Users, BarChart3, PenTool, Globe, ArrowRight, Sparkles, Clock, Target, TrendingUp } from "lucide-react"
 import styles from "./blog-management.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

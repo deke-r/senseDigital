@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Local SEO Services – MetaSense",
+  description:
+    "Boost your local business visibility with MetaSense Local SEO services. Improve rankings on Google Maps, drive local traffic, and attract nearby customers.",
+  keywords:
+    "local SEO, local search optimization, Google My Business SEO, local SEO services, MetaSense local SEO, local business SEO, improve local rankings, SEO for small businesses",
+  alternates: {
+    canonical: "https://metasense.in/services/local-seo",
+  },
+  openGraph: {
+    title: "Local SEO Services – MetaSense",
+    description:
+      "MetaSense offers professional Local SEO services to increase your business visibility in local searches, Google Maps, and attract more nearby customers.",
+    url: "https://metasense.in/services/local-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-local-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Local SEO Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Local SEO Services – MetaSense",
+    description:
+      "Improve your local search rankings and attract nearby customers with MetaSense Local SEO services.",
+    images: ["https://metasense.in/og-local-seo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import React from 'react'
 import Link from "next/link"
 import { MapPin, Users, Star, CheckCircle, BarChart3, Target, Globe, Phone, Clock, ArrowRight } from "lucide-react"

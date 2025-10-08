@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Software Development Services – MetaSense",
+  description:
+    "MetaSense offers custom software development solutions to help businesses streamline operations and drive digital transformation. Scalable, secure, and innovative software.",
+  keywords:
+    "software development, custom software solutions, enterprise software, application development, software outsourcing, MetaSense software, digital transformation, business software solutions",
+  alternates: {
+    canonical: "https://metasense.in/services/software-development",
+  },
+  openGraph: {
+    title: "Software Development Services – MetaSense",
+    description:
+      "Get tailored software development solutions from MetaSense. We build scalable, secure, and innovative software for your business needs.",
+    url: "https://metasense.in/services/software-development",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-software-development.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Software Development",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Software Development Services – MetaSense",
+    description:
+      "MetaSense provides custom software development services for businesses. Secure, scalable, and innovative solutions for digital growth.",
+    images: ["https://metasense.in/og-software-development.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { Code2, Cog, Layers, Zap, Shield, Workflow, CheckCircle, ArrowRight, Database, Cloud, Lock, Sparkles } from "lucide-react"
 import styles from "./software-development.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

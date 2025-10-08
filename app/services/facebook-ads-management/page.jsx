@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Facebook Ads Management – MetaSense",
+  description:
+    "Drive business growth with MetaSense Facebook Ads management. Expertly targeted campaigns, optimized for leads, engagement, and ROI.",
+  keywords:
+    "Facebook Ads management, social media advertising, MetaSense Facebook campaigns, lead generation, targeted Facebook ads, paid social marketing, Facebook PPC, Facebook marketing strategy, business advertising on Facebook, MetaSense marketing services",
+  alternates: {
+    canonical: "https://metasense.in/services/facebook-ads-management",
+  },
+  openGraph: {
+    title: "Facebook Ads Management – MetaSense",
+    description:
+      "MetaSense offers professional Facebook Ads management services to help businesses increase engagement, generate leads, and boost ROI.",
+    url: "https://metasense.in/services/facebook-ads-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-facebook-ads.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Facebook Ads Management",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facebook Ads Management – MetaSense",
+    description:
+      "Maximize engagement and leads with MetaSense Facebook Ads campaigns. Targeted social media advertising for measurable ROI.",
+    images: ["https://metasense.in/og-facebook-ads.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import Link from "next/link"
 import { Facebook, Target, TrendingUp, DollarSign, BarChart3, Zap, ArrowRight } from "lucide-react"
 import styles from "./facebook-ads.module.css"

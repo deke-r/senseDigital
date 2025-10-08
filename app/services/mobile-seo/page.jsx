@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Mobile SEO Services – MetaSense",
+  description:
+    "Optimize your website for mobile users with MetaSense Mobile SEO services. Improve mobile search rankings, page speed, and user experience for better engagement and conversions.",
+  keywords:
+    "Mobile SEO, mobile website optimization, mobile search ranking, responsive SEO, MetaSense SEO services, mobile-friendly SEO, mobile page speed optimization, SEO for smartphones, mobile site SEO",
+  alternates: {
+    canonical: "https://metasense.in/services/mobile-seo",
+  },
+  openGraph: {
+    title: "Mobile SEO Services – MetaSense",
+    description:
+      "MetaSense provides Mobile SEO services to enhance mobile user experience, improve search visibility, and boost engagement on mobile devices.",
+    url: "https://metasense.in/services/mobile-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-mobile-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Mobile SEO Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile SEO Services – MetaSense",
+    description:
+      "Enhance your mobile website's SEO with MetaSense Mobile SEO services. Optimize for speed, responsiveness, and mobile search rankings.",
+    images: ["https://metasense.in/og-mobile-seo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import React from 'react'
 import Link from "next/link"
 import { Smartphone, Zap, Globe, CheckCircle, ArrowRight, BarChart3, Target, Users, Clock, Search } from "lucide-react"

@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "On-Page SEO Services – MetaSense",
+  description:
+    "Enhance your website's search engine visibility with MetaSense On-Page SEO services. Optimize meta tags, headings, content, images, and internal linking for better rankings.",
+  keywords:
+    "On-page SEO, MetaSense SEO services, meta tags optimization, headings optimization, content SEO, image SEO, internal linking, website SEO audit, search engine optimization, improve website ranking",
+  alternates: {
+    canonical: "https://metasense.in/services/on-page-seo",
+  },
+  openGraph: {
+    title: "On-Page SEO Services – MetaSense",
+    description:
+      "MetaSense provides professional On-Page SEO services to improve website rankings and user experience through expert optimization techniques.",
+    url: "https://metasense.in/services/on-page-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-on-page-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense On-Page SEO Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "On-Page SEO Services – MetaSense",
+    description:
+      "Boost your website's search engine performance with MetaSense On-Page SEO. Optimize your content, meta tags, images, and internal links effectively.",
+    images: ["https://metasense.in/og-on-page-seo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import React from 'react'
 import Link from "next/link"
 import { FileText, Search, Target, Zap, CheckCircle, ArrowRight, BarChart3, Globe, Code, Eye } from "lucide-react"

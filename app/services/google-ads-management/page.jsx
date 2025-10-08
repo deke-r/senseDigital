@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Google Ads & PPC Management – MetaSense",
+  description:
+    "Maximize ROI with MetaSense Google Ads management and PPC campaigns. Targeted advertising, optimized bidding, and lead generation for your business.",
+  keywords:
+    "Google Ads management, PPC campaigns, paid advertising, online advertising strategy, MetaSense PPC services, lead generation, ROI optimization, Google Ads expert, digital advertising, search ads",
+  alternates: {
+    canonical: "https://metasense.in/services/google-ads-management",
+  },
+  openGraph: {
+    title: "Google Ads & PPC Management – MetaSense",
+    description:
+      "MetaSense provides expert Google Ads and PPC management services to drive traffic, leads, and conversions for your business.",
+    url: "https://metasense.in/services/google-ads-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-google-ads.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Google Ads & PPC Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Google Ads & PPC Management – MetaSense",
+    description:
+      "Drive leads and conversions with MetaSense Google Ads management and PPC services. Optimized campaigns for maximum ROI.",
+    images: ["https://metasense.in/og-google-ads.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import {

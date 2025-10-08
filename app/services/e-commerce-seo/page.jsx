@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "E-Commerce SEO Services – MetaSense",
+  description:
+    "Drive more traffic and sales to your online store with MetaSense E-Commerce SEO services. Optimize product pages, categories, and content for higher search rankings.",
+  keywords:
+    "E-Commerce SEO, online store SEO, product page optimization, category page SEO, MetaSense SEO services, e-commerce website SEO, SEO for online shops, increase online sales, search engine optimization",
+  alternates: {
+    canonical: "https://metasense.in/services/e-commerce-seo",
+  },
+  openGraph: {
+    title: "E-Commerce SEO Services – MetaSense",
+    description:
+      "MetaSense offers professional E-Commerce SEO services to boost your online store's visibility, increase traffic, and maximize sales through optimized SEO strategies.",
+    url: "https://metasense.in/services/e-commerce-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-ecommerce-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense E-Commerce SEO Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "E-Commerce SEO Services – MetaSense",
+    description:
+      "Optimize your online store for higher search rankings with MetaSense E-Commerce SEO services. Product and category page optimization for maximum traffic and sales.",
+    images: ["https://metasense.in/og-ecommerce-seo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import Link from "next/link"
 import { ShoppingCart, TrendingUp, Search, Package, Target, ArrowRight } from "lucide-react"
 import styles from "./ecommerce-seo.module.css"

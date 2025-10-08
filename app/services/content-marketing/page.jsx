@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Content Marketing Services – MetaSense",
+  description:
+    "Drive traffic, engage your audience, and boost conversions with MetaSense Content Marketing services. Professional content strategy, creation, and distribution.",
+  keywords:
+    "content marketing, content strategy, MetaSense content services, blog writing, article writing, SEO content, social media content, website content, content creation services, digital content marketing",
+  alternates: {
+    canonical: "https://metasense.in/services/content-marketing",
+  },
+  openGraph: {
+    title: "Content Marketing Services – MetaSense",
+    description:
+      "MetaSense offers expert content marketing services to enhance brand visibility, audience engagement, and online presence.",
+    url: "https://metasense.in/services/content-marketing",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-content-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Content Marketing Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Marketing Services – MetaSense",
+    description:
+      "Engage your audience and boost online visibility with MetaSense Content Marketing services.",
+    images: ["https://metasense.in/og-content-marketing.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { FileText, PenTool, Calendar, Target, BarChart3, Users, ArrowRight, Sparkles, Globe, Megaphone } from "lucide-react"
 import styles from "./content-marketing.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

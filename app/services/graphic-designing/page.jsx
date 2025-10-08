@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Graphic Design Services – MetaSense",
+  description:
+    "MetaSense offers professional graphic design services to create stunning visuals for your brand, including logos, banners, social media graphics, and marketing materials.",
+  keywords:
+    "graphic design services, logo design, branding, social media graphics, marketing design, creative design solutions, MetaSense graphic design, visual branding, business design services",
+  alternates: {
+    canonical: "https://metasense.in/services/graphic-designing",
+  },
+  openGraph: {
+    title: "Graphic Design Services – MetaSense",
+    description:
+      "Professional graphic design by MetaSense to create compelling visuals for your brand, including logos, banners, and social media graphics.",
+    url: "https://metasense.in/services/graphic-designing",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-graphic-design.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Graphic Design",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Graphic Design Services – MetaSense",
+    description:
+      "MetaSense provides creative graphic design services for logos, banners, social media, and marketing materials to enhance your brand identity.",
+    images: ["https://metasense.in/og-graphic-design.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Palette, Layers, Sparkles, Pen, ImageIcon, Layout, ArrowRight } from "lucide-react"
 import CTATriggerButton from "@/components/CTATriggerButton"
 import styles from "./graphic-designing.module.css"

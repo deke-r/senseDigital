@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "LinkedIn Ads Management – MetaSense",
+  description:
+    "Boost your B2B marketing with MetaSense LinkedIn Ads management. Targeted campaigns, lead generation, and ROI-focused advertising for professionals.",
+  keywords:
+    "LinkedIn Ads management, B2B advertising, professional targeting, lead generation, MetaSense LinkedIn services, social media ads, paid LinkedIn campaigns, business ads, LinkedIn marketing strategy, LinkedIn PPC",
+  alternates: {
+    canonical: "https://metasense.in/services/linkedin-ads-management",
+  },
+  openGraph: {
+    title: "LinkedIn Ads Management – MetaSense",
+    description:
+      "MetaSense provides expert LinkedIn Ads management to help businesses generate leads, increase brand awareness, and improve ROI in B2B marketing.",
+    url: "https://metasense.in/services/linkedin-ads-management",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-linkedin-ads.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense LinkedIn Ads Management",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LinkedIn Ads Management – MetaSense",
+    description:
+      "Maximize your B2B reach with MetaSense LinkedIn Ads campaigns. Targeted advertising, lead generation, and ROI-focused strategy.",
+    images: ["https://metasense.in/og-linkedin-ads.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import {

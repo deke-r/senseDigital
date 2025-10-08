@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "UI/UX Design Services – MetaSense",
+  description:
+    "MetaSense offers professional UI/UX design services to create intuitive, user-friendly interfaces and enhance user experience across web and mobile applications.",
+  keywords:
+    "UI UX design services, user interface design, user experience design, mobile app UI UX, web app UI UX, MetaSense UI UX design, responsive design, interaction design, usability optimization, app design",
+  alternates: {
+    canonical: "https://metasense.in/services/ui-ux",
+  },
+  openGraph: {
+    title: "UI/UX Design Services – MetaSense",
+    description:
+      "Professional UI/UX design by MetaSense for web and mobile applications, focusing on intuitive interfaces and enhanced user experience.",
+    url: "https://metasense.in/services/ui-ux",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-ui-ux.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense UI UX Design",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UI/UX Design Services – MetaSense",
+    description:
+      "MetaSense provides creative UI/UX design solutions for web and mobile apps, enhancing usability and user satisfaction.",
+    images: ["https://metasense.in/og-ui-ux.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import { Figma, Smartphone, Monitor, Users, Zap, Target, ArrowRight } from "lucide-react"
 import styles from "./ui-ux.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"

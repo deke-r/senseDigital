@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "SEO Outsourcing Services – MetaSense",
+  description:
+    "Outsource your SEO to MetaSense for expert optimization, improved search rankings, and measurable results. Focus on your business while we handle your SEO campaigns.",
+  keywords:
+    "SEO outsourcing, SEO services, outsource SEO, search engine optimization, MetaSense SEO, SEO campaign management, on-page SEO, off-page SEO, SEO experts, digital marketing SEO",
+  alternates: {
+    canonical: "https://metasense.in/services/search-engine-optimization-outsourcing-seo",
+  },
+  openGraph: {
+    title: "SEO Outsourcing Services – MetaSense",
+    description:
+      "MetaSense provides professional SEO outsourcing services to improve website visibility, drive traffic, and enhance online presence for businesses.",
+    url: "https://metasense.in/services/search-engine-optimization-outsourcing-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-seo-outsourcing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense SEO Outsourcing Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO Outsourcing Services – MetaSense",
+    description:
+      "Outsource your SEO to MetaSense for expert on-page and off-page optimization, better rankings, and measurable ROI.",
+    images: ["https://metasense.in/og-seo-outsourcing.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import React from 'react'
 import Link from "next/link"
 import { Users, Clock, DollarSign, CheckCircle, ArrowRight, BarChart3, Target, Shield, Zap, TrendingUp } from "lucide-react"

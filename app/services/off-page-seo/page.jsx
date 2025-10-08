@@ -1,3 +1,41 @@
+export const metadata = {
+  title: "Off-Page SEO Services – MetaSense",
+  description:
+    "Boost your website authority and search engine rankings with MetaSense Off-Page SEO services. Build high-quality backlinks, manage citations, and enhance online presence.",
+  keywords:
+    "Off-page SEO, MetaSense SEO services, backlink building, citation management, domain authority improvement, link building services, external SEO, website promotion, SEO strategies, online visibility",
+  alternates: {
+    canonical: "https://metasense.in/services/off-page-seo",
+  },
+  openGraph: {
+    title: "Off-Page SEO Services – MetaSense",
+    description:
+      "MetaSense provides expert Off-Page SEO services to enhance website authority and search engine rankings through high-quality backlinks and external optimization strategies.",
+    url: "https://metasense.in/services/off-page-seo",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-off-page-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Off-Page SEO Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Off-Page SEO Services – MetaSense",
+    description:
+      "Enhance your website's authority and visibility with MetaSense Off-Page SEO services. Expert backlink building, citation management, and external SEO optimization.",
+    images: ["https://metasense.in/og-off-page-seo.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
 import React from 'react'
 import Link from "next/link"
 import { Link as LinkIcon, TrendingUp, Users, Globe, CheckCircle, ArrowRight, BarChart3, Target, Zap, Share2 } from "lucide-react"

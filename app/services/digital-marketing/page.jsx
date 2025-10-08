@@ -1,3 +1,42 @@
+export const metadata = {
+  title: "Digital Marketing Services – MetaSense",
+  description:
+    "Boost your business with MetaSense Digital Marketing services. SEO, PPC, SMO, content marketing & strategy to drive traffic, leads, and growth.",
+  keywords:
+    "digital marketing, SEO services, PPC campaigns, social media optimization, content marketing, online marketing strategy, business growth, MetaSense digital services, lead generation, marketing campaigns",
+  alternates: {
+    canonical: "https://metasense.in/services/digital-marketing",
+  },
+  openGraph: {
+    title: "Digital Marketing Services – MetaSense",
+    description:
+      "MetaSense provides comprehensive digital marketing services including SEO, PPC, SMO, and content strategy to grow your business online.",
+    url: "https://metasense.in/services/digital-marketing",
+    siteName: "MetaSense",
+    images: [
+      {
+        url: "https://metasense.in/og-digital-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MetaSense Digital Marketing Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing Services – MetaSense",
+    description:
+      "Grow your business with MetaSense Digital Marketing services: SEO, PPC, SMO, and content marketing for maximum impact.",
+    images: ["https://metasense.in/og-digital-marketing.jpg"],
+    creator: "@MetaSense",
+  },
+};
+
+
+
+
 import { TrendingUp, Search, Users, Target, BarChart3, Globe, ArrowRight, Sparkles } from "lucide-react"
 import styles from "./digital-marketing.module.css"
 import CTATriggerButton from "@/components/CTATriggerButton"
