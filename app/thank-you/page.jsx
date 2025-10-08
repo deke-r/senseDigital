@@ -1,19 +1,11 @@
-import Head from "next/head"
-import Layout from "../../components/Layout"
 import styles from "../../styles/pages/thank-you.module.css"
 import { CheckCircle, ArrowRight, Home, Mail } from "lucide-react"
 import Link from "next/link"
 
 export default function ThankYouPage() {
   return (
-    <Layout>
-      <Head>
-        <title>Sense Digital - Thank You</title>
-        <meta name="description" content="Thank you for contacting Sense Digital. We'll get back to you soon." />
-        <meta property="og:title" content="Sense Digital - Thank You" />
-        <meta property="og:description" content="Thank you for contacting Sense Digital. We'll get back to you soon." />
-        <meta property="og:image" content="/placeholder.svg?height=630&width=1200" />
-      </Head>
+
+
       
       <main className="container my-5">
         {/* Hero Section */}
@@ -117,6 +109,6 @@ export default function ThankYouPage() {
           </div>
         </section>
       </main>
-    </Layout>
+
   )
 }

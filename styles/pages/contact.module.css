@@ -379,3 +379,14 @@
     height: 250px;
   }
 }
+
+
+.lightContactInfo {
+  background: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+.darkContactInfo {
+  background: var(--contact-bg);
+  color: var(--contact-text);
+}

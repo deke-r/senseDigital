@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import { useForm } from "react-hook-form"
-import { useRouter } from "next/navigation"
-import { useState } from "react"
-import { useDarkMode } from "../context/DarkModeContext"
-import styles from "../styles/components/contact-form.module.css"
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import axios from "axios";
+import { useDarkMode } from "../context/DarkModeContext";
+import styles from "../styles/components/contact-form.module.css";
 
 export default function ContactForm() {
   const {
@@ -12,36 +13,48 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm()
-  const router = useRouter()
-  const [submitError, setSubmitError] = useState("")
-  const { isDarkMode } = useDarkMode()
+  } = useForm();
+
+  const router = useRouter();
+  const [submitError, setSubmitError] = useState("");
+  const [submitSuccess, setSubmitSuccess] = useState("");
+  const { isDarkMode } = useDarkMode();
 
   const onSubmit = async (data) => {
-    setSubmitError("")
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
+    setSubmitError("");
+    setSubmitSuccess("");
 
-      if (response.ok) {
-        reset()
-        router.push("/thank-you")
+    try {
+      const res = await axios.post("/api/contact", data);
+
+      if (res.data.success) {
+        setSubmitSuccess("Message sent successfully!");
+        reset();
+
+        const modalElement = document.getElementById("ctaModal")
+        if (modalElement) {
+          const modalInstance = bootstrap.Modal.getInstance(modalElement)
+          if (modalInstance) modalInstance.hide()
+        }
+
+        setTimeout(() => {
+          router.push("/thank-you");
+        }, 1500);
       } else {
-        const errorData = await response.json()
-        setSubmitError(errorData.error || "Failed to send message. Please try again.")
+        setSubmitError(res.data.error || "Failed to send message. Please try again.");
       }
     } catch (error) {
-      setSubmitError("Network error. Please try again.")
+      console.error(error);
+      setSubmitError("Network error. Please try again later.");
     }
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`${styles.contactForm} ${isDarkMode ? styles.darkMode : styles.lightMode}`}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={`${styles.contactForm} ${isDarkMode ? styles.darkMode : styles.lightMode}`}
+    >
+      {/* Name */}
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
@@ -55,6 +68,7 @@ export default function ContactForm() {
         {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
       </div>
 
+      {/* Email */}
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
           Email
@@ -74,6 +88,7 @@ export default function ContactForm() {
         {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
       </div>
 
+      {/* Phone */}
       <div className="mb-3">
         <label htmlFor="phone" className="form-label">
           Phone
@@ -93,6 +108,7 @@ export default function ContactForm() {
         {errors.phone && <div className="invalid-feedback">{errors.phone.message}</div>}
       </div>
 
+      {/* Message */}
       <div className="mb-3">
         <label htmlFor="message" className="form-label">
           Message
@@ -112,11 +128,14 @@ export default function ContactForm() {
         {errors.message && <div className="invalid-feedback">{errors.message.message}</div>}
       </div>
 
-      {submitError && <div className={`alert alert-danger ${styles.errorMessage}`}>{submitError}</div>}
+      {/* Bootstrap Alerts */}
+      {submitError && <div className="alert alert-danger">{submitError}</div>}
+      {submitSuccess && <div className="alert alert-success">{submitSuccess}</div>}
 
+      {/* Submit Button */}
       <button type="submit" className={`btn ${styles.submitButton}`} disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
-  )
+  );
 }
