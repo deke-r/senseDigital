@@ -46,9 +46,9 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className="container-fluid p-0">
         {/* Main Footer Content */}
-        <div className="row">
+        <div className="row mx-md-5">
           {/* Company Info */}
           <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <div className={styles.companySection}>
@@ -62,16 +62,16 @@ export default function Footer() {
                 that drive real results.
               </p>
               <div className={styles.socialLinks}>
-                <a href="#" className={styles.socialIcon} aria-label="Facebook">
+                <a href="https://www.facebook.com/metasensedigital/" className={styles.socialIcon} aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className={styles.socialIcon} aria-label="Twitter">
+                <a href="https://x.com/metasense_" className={styles.socialIcon} aria-label="Twitter">
                   <Twitter size={20} />
                 </a>
                 <a href="#" className={styles.socialIcon} aria-label="LinkedIn">
                   <Linkedin size={20} />
                 </a>
-                <a href="#" className={styles.socialIcon} aria-label="Instagram">
+                <a href="https://www.instagram.com/metasensedigital/" className={styles.socialIcon} aria-label="Instagram">
                   <Instagram size={20} />
                 </a>
               </div>
@@ -114,15 +114,17 @@ export default function Footer() {
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <MapPin size={16} className={styles.contactIcon} />
-                <span>123 Digital Street, New York, USA</span>
+                <span>MetaSense Digital Marketing Agency<br />
+                      Surya Plaza K-185, 2nd Floor<br />
+                      Sarai Jullena, New Delhi-110025</span>
               </div>
               <div className={styles.contactItem}>
                 <Phone size={16} className={styles.contactIcon} />
-                <span>+1 (123) 456-7890</span>
+                <span>+91 9599 196874</span>
               </div>
               <div className={styles.contactItem}>
                 <Mail size={16} className={styles.contactIcon} />
-                <span>info@meta.sense</span>
+                <span>info@metasense.in</span>
               </div>
             </div>
             
@@ -150,7 +152,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <div className="row align-items-center">
+          <div className="row align-items-center px-md-5">
             <div className="col-md-6">
               <p className={styles.copyright}>
                 &copy; {new Date().getFullYear()} MetaSense. All rights reserved.
