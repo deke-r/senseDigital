@@ -16,9 +16,9 @@ const Hero = () => {
   ]
 
   const stats = [
-    { number: "500+", label: "Projects Delivered" },
+    { number: "175+", label: "Projects Delivered" },
     { number: "98%", label: "Client Satisfaction" },
-    { number: "5+", label: "Years Experience" }
+    { number: "3+", label: "Years Experience" }
   ]
 
   return (
@@ -70,9 +70,9 @@ const Hero = () => {
                   className={`${styles.primaryBtn} rounded-4`}
                 />
 
-                <button className={styles.secondaryBtn}>
+                {/* <button className={styles.secondaryBtn}>
                   View Our Work
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

@@ -8,161 +8,189 @@ import { useDarkMode } from "../context/DarkModeContext"
 const workProjects = [
   {
     id: 1,
-    title: "E-commerce Platform Redesign",
-    category: "Web Development",
-    description: "Complete redesign of a modern e-commerce platform with advanced filtering, payment integration, and mobile optimization.",
-    image: "🛒",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+    title: "Scrapify Website",
+    category: "Next.js & MERN Stack",
+    description: "A platform facilitating bulk scrap and electronic waste collection for businesses, institutions, and communities across Delhi NCR.",
+    image: "🌐",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
     results: {
-      conversion: "+180%",
-      traffic: "+250%",
-      revenue: "+320%"
+      customers: "1,800+",
+      retention: "High",
+      feedback: "Positive"
     },
-    timeline: "6 months",
-    team: "8 members",
-    client: "RetailTech Solutions",
+    timeline: "4 months",
+    team: "5 members",
+    client: "Scrapify",
     features: [
-      "Advanced product filtering",
-      "Real-time inventory management",
-      "Mobile-first responsive design",
-      "Secure payment processing",
-      "Admin dashboard"
+      "Instant booking via WhatsApp or online form",
+      "Transparent pricing with instant UPI or bank payments",
+      "GST-compliant invoicing and green recycling certificates",
+      "Certified and trained pickup team",
+      "Digital weighing scales for accurate measurements"
     ],
     color: "#3df3e5",
     status: "Completed",
-    rating: 5
+    rating: 5,
+    link: "https://scrapify.in/"
   },
   {
     id: 2,
-    title: "Healthcare Management System",
-    category: "Custom Software",
-    description: "HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.",
-    image: "🏥",
-    technologies: ["React", "Python", "PostgreSQL", "Docker", "Redis"],
+    title: "Aerofabricators Website",
+    category: "Next.js & MERN Stack",
+    description: "A company specializing in heavy steel fabrication, offering services for industrial and commercial projects.",
+    image: "🏗️",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
     results: {
-      efficiency: "+200%",
-      patients: "+150%",
-      satisfaction: "98%"
+      projects: "Numerous completed",
+      clients: "Multiple industries",
+      satisfaction: "High"
     },
-    timeline: "8 months",
-    team: "12 members",
-    client: "MedCare Plus",
+    timeline: "3 months",
+    team: "4 members",
+    client: "Aerofabricators",
     features: [
-      "Patient record management",
-      "Appointment scheduling",
-      "Telemedicine integration",
-      "HIPAA compliance",
-      "Analytics dashboard"
+      "Custom steel fabrication services",
+      "Detailed project portfolio showcasing past works",
+      "Client testimonials and case studies",
+      "Contact forms and inquiry submission"
     ],
     color: "#3a4ef9",
     status: "Completed",
-    rating: 5
+    rating: 4,
+    link: "https://aerofabricators.in/"
   },
   {
     id: 3,
-    title: "SaaS Analytics Platform",
-    category: "Web Application",
-    description: "Comprehensive analytics platform for SaaS businesses with real-time data visualization and custom reporting.",
-    image: "📊",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Chart.js"],
+    title: "Sense Interiors Website",
+    category: "Next.js & MERN Stack",
+    description: "An award-winning interior design and architectural firm specializing in residential and commercial projects across Delhi NCR.",
+    image: "🏠",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
     results: {
-      users: "2,500+",
-      retention: "85%",
-      growth: "+400%"
+      projects: "1,300+ completed",
+      clients: "High",
+      feedback: "Positive"
     },
-    timeline: "10 months",
-    team: "10 members",
-    client: "DataFlow Analytics",
+    timeline: "5 months",
+    team: "6 members",
+    client: "Sense Interiors",
     features: [
-      "Real-time data visualization",
-      "Custom report builder",
-      "API integrations",
-      "User management",
-      "Export capabilities"
+      "Showcase of completed projects",
+      "Detailed service offerings including consultancy and turnkey solutions",
+      "Client testimonials and project galleries",
+      "Contact forms and free consultation booking"
     ],
     color: "#f59e0b",
-    status: "In Progress",
-    rating: 4
+    status: "Completed",
+    rating: 5,
+    link: "https://senseinteriors.in/"
   },
   {
     id: 4,
-    title: "Mobile Banking App",
-    category: "Mobile Development",
-    description: "Secure mobile banking application with biometric authentication, transaction management, and financial planning tools.",
-    image: "🏦",
-    technologies: ["React Native", "Node.js", "MongoDB", "JWT", "Firebase"],
+    title: "StarGlass Website",
+    category: "Next.js & MERN Stack",
+    description: "A leading glass dealer offering a wide range of glass products and services for commercial, residential, and industrial applications.",
+    image: "🪟",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
     results: {
-      downloads: "50K+",
-      rating: "4.8/5",
-      transactions: "1M+"
+      products: "Variety of glass solutions",
+      services: "Installation & maintenance",
+      clientSatisfaction: "High"
     },
-    timeline: "12 months",
-    team: "15 members",
-    client: "FinanceFlow Bank",
+    timeline: "4 months",
+    team: "5 members",
+    client: "StarGlass",
     features: [
-      "Biometric authentication",
-      "Transaction management",
-      "Financial planning",
-      "Push notifications",
-      "Offline capabilities"
+      "Comprehensive product catalog",
+      "Service offerings for installation and maintenance",
+      "Project gallery showcasing completed works",
+      "Client testimonials and contact information"
     ],
     color: "#10b981",
     status: "Completed",
-    rating: 5
+    rating: 4,
+    link: "https://starglass.in/"
   },
   {
     id: 5,
-    title: "Learning Management System",
-    category: "EdTech Platform",
-    description: "Comprehensive LMS with course creation, student tracking, and interactive learning modules for educational institutions.",
-    image: "🎓",
-    technologies: ["Vue.js", "Laravel", "MySQL", "AWS S3", "WebRTC"],
+    title: "SkySignage Website",
+    category: "Next.js & MERN Stack",
+    description: "A signage company specializing in custom signboards, printing, and visual merchandising for businesses across Delhi NCR.",
+    image: "🖼️",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
     results: {
-      students: "10K+",
-      courses: "500+",
-      completion: "92%"
+      signage: "LED, neon, acrylic & more",
+      printing: "Flex, vinyl, canvas",
+      clientReach: "Multiple businesses"
     },
-    timeline: "9 months",
-    team: "14 members",
-    client: "EduTech Academy",
+    timeline: "3 months",
+    team: "4 members",
+    client: "Sky Signage",
     features: [
-      "Course creation tools",
-      "Student progress tracking",
-      "Interactive assessments",
-      "Video conferencing",
-      "Certificate generation"
-    ],
-    color: "#8b5cf6",
-    status: "Completed",
-    rating: 5
-  },
-  {
-    id: 6,
-    title: "IoT Manufacturing Dashboard",
-    category: "Industrial IoT",
-    description: "Real-time IoT dashboard for manufacturing operations with predictive maintenance and production monitoring.",
-    image: "🏭",
-    technologies: ["React", "Python", "InfluxDB", "MQTT", "Docker"],
-    results: {
-      efficiency: "+150%",
-      downtime: "-60%",
-      maintenance: "+200%"
-    },
-    timeline: "7 months",
-    team: "11 members",
-    client: "ManufacturePro",
-    features: [
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Production analytics",
-      "Alert system",
-      "Mobile access"
+      "Diverse range of signboard options",
+      "Printing services for various materials",
+      "Visual merchandising solutions",
+      "Gallery showcasing completed projects"
     ],
     color: "#ef4444",
     status: "Completed",
-    rating: 4
+    rating: 4,
+    link: "https://skysignage.in/"
+  },
+  {
+    id: 6,
+    title: "Acme Global Website",
+    category: "Next.js & MERN Stack",
+    description: "A corporate website showcasing Acme Global's services, clients, and global reach.",
+    image: "🌐",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
+    results: {
+      services: "Showcased",
+      clients: "Multiple global clients",
+      inquiries: "Generated leads"
+    },
+    timeline: "4 months",
+    team: "5 members",
+    client: "Acme Global",
+    features: [
+      "Company overview and services",
+      "Client showcase",
+      "Contact and inquiry forms",
+      "Responsive and modern design"
+    ],
+    color: "#8b5cf6",
+    status: "Completed",
+    rating: 5,
+    link: "https://acmeglobal.in/"
+  },
+  {
+    id: 7,
+    title: "CFDSI Website",
+    category: "Next.js & MERN Stack",
+    description: "Website for CFDSI providing information on services, projects, and contact options.",
+    image: "🏢",
+    technologies: ["Next.js", "Node.js", "SQL", "Express", "React"],
+    results: {
+      services: "Showcased",
+      projects: "Listed",
+      inquiries: "Generated leads"
+    },
+    timeline: "3 months",
+    team: "4 members",
+    client: "CFDSI",
+    features: [
+      "Service listings",
+      "Project portfolio",
+      "Contact forms",
+      "Responsive modern UI"
+    ],
+    color: "#3a4ef9",
+    status: "Completed",
+    rating: 4,
+    link: "https://cfdsi.com/"
   }
 ];
+
 
 export default function WorkCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -426,14 +454,17 @@ export default function WorkCarousel() {
             </div>
             
             <div className={styles.modalFooter}>
-              <button className={styles.modalPrimaryBtn}>
-                View Live Project
-                <ExternalLink size={16} />
-              </button>
-              <button className={styles.modalSecondaryBtn}>
-                <Github size={16} />
-                View Code
-              </button>
+            <a 
+  href={selectedProject.link} 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className={styles.modalPrimaryBtn}
+>
+  View Live Project
+  <ExternalLink size={16} />
+</a>
+
+        
             </div>
           </div>
         </div>

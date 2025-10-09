@@ -116,7 +116,7 @@ export default function Footer() {
                 <MapPin size={16} className={styles.contactIcon} />
                 <span>MetaSense Digital Marketing Agency<br />
                       Surya Plaza K-185, 2nd Floor<br />
-                      Sarai Jullena, New Delhi-110025</span>
+                      Sarai Jullena, NFC, New Delhi-110025</span>
               </div>
               <div className={styles.contactItem}>
                 <Phone size={16} className={styles.contactIcon} />

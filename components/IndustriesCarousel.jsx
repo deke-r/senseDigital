@@ -1,69 +1,69 @@
 'use client'
 
 import styles from "../styles/components/IndustriesCarousel.module.css"
-import { ChevronLeft, ChevronRight, Building2, Users, TrendingUp, Globe, Shield, Zap } from "lucide-react"
+import { ChevronLeft, ChevronRight, Monitor, Globe, Users, Star, Zap, Shield, Home } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useDarkMode } from "../context/DarkModeContext"
 
 const industries = [
   {
     id: 1,
-    name: "Technology",
-    icon: <Building2 size={32} />,
-    description: "Software development, AI solutions, and digital transformation for tech companies.",
-    projects: "150+",
-    clients: "TechCorp, InnovateLab, DataFlow",
-    services: ["Custom Software", "AI Integration", "Cloud Solutions"],
+    name: "Corporate Websites",
+    icon: <Monitor size={32} />,
+    description: "Custom corporate websites, responsive UI, and digital branding for businesses.",
+    projects: "45+",
+    clients: "Acme Global, CFDSI, Starglass",
+    services: ["Web Development", "UI/UX Design", "Brand Integration"],
     color: "#3df3e5"
   },
   {
     id: 2,
-    name: "Healthcare",
-    icon: <Shield size={32} />,
-    description: "HIPAA-compliant solutions, telemedicine platforms, and medical data management.",
-    projects: "85+",
-    clients: "HealthTech, MedFlow, CarePlus",
-    services: ["Telemedicine", "EHR Systems", "Compliance"],
+    name: "E-commerce Solutions",
+    icon: <Globe size={32} />,
+    description: "Online stores, payment integration, inventory management, and digital marketing.",
+    projects: "25+",
+    clients: "Scrapify, SkySignage, Sense Interiors",
+    services: ["E-commerce Websites", "Payment Gateways", "Inventory Systems"],
     color: "#3a4ef9"
   },
   {
     id: 3,
-    name: "E-commerce",
-    icon: <Globe size={32} />,
-    description: "Online stores, payment gateways, inventory management, and customer analytics.",
-    projects: "200+",
-    clients: "EcoRetail, ShopFlow, MarketPlace",
-    services: ["Online Stores", "Payment Systems", "Analytics"],
+    name: "Interior & Design",
+    icon: <Users size={32} />,
+    description: "Web platforms for interior design firms to showcase projects and services.",
+    projects: "20+",
+    clients: "Sense Interiors, Starglass",
+    services: ["Portfolio Websites", "Service Showcases", "Booking Forms"],
     color: "#f59e0b"
   },
   {
     id: 4,
-    name: "Finance",
-    icon: <TrendingUp size={32} />,
-    description: "Banking solutions, fintech apps, trading platforms, and financial analytics.",
-    projects: "120+",
-    clients: "FinanceFlow, InvestPro, BankTech",
-    services: ["Banking Apps", "Trading Platforms", "Analytics"],
+    name: "Signage & Branding",
+    icon: <Star size={32} />,
+    description: "Web solutions for signage companies with project galleries and online inquiries.",
+    projects: "15+",
+    clients: "SkySignage, Aerofabricators",
+    services: ["Showcase Websites", "Inquiry Forms", "Digital Branding"],
     color: "#10b981"
   },
   {
     id: 5,
-    name: "Education",
-    icon: <Users size={32} />,
-    description: "Learning management systems, online courses, and educational technology platforms.",
-    projects: "95+",
-    clients: "EduTech, LearnHub, SkillFlow",
-    services: ["LMS Platforms", "Online Courses", "Assessment Tools"],
+    name: "Industrial & Manufacturing",
+    icon: <Zap size={32} />,
+    description: "Web platforms for industrial and manufacturing companies to highlight services and projects.",
+    projects: "15+",
+    clients: "Aerofabricators, CFDSI",
+    services: ["Corporate Websites", "Project Portfolios", "Client Testimonials"],
     color: "#8b5cf6"
   },
   {
     id: 6,
-    name: "Manufacturing",
-    icon: <Zap size={32} />,
-    description: "IoT solutions, supply chain management, and industrial automation systems.",
-    projects: "75+",
-    clients: "ManufacturePro, SupplyChain, AutoFlow",
-    services: ["IoT Solutions", "Supply Chain", "Automation"],
+    name: "Construction & Projects",
+    icon: <Home size={32} />,
+    description: "Digital solutions for construction and project management firms showcasing services and completed projects.",
+    projects: "30+",
+    clients: "Sense Projects",
+    services: ["Portfolio Websites", "Service Showcases", "Lead Generation Forms"],
     color: "#ef4444"
   }
 ];
@@ -177,12 +177,12 @@ export default function IndustriesCarousel() {
                       </div>
                     </div>
                     
-                    <div className={styles.industryFooter}>
+                    {/* <div className={styles.industryFooter}>
                       <button className={styles.exploreBtn}>
                         Explore Solutions
                         <ChevronRight size={16} />
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 ))}
               </div>

@@ -12,13 +12,13 @@ const SuccessStories = () => {
   const successMetrics = [
     {
       icon: <TrendingUp size={24} />,
-      number: "300%",
+      number: "200%",
       label: "Average Growth",
       description: "Revenue increase for our clients"
     },
     {
       icon: <Users size={24} />,
-      number: "500+",
+      number: "125+",
       label: "Happy Clients",
       description: "Businesses we've transformed"
     },
@@ -306,15 +306,15 @@ const SuccessStories = () => {
                     Start Your Project <ArrowRight className={styles.arrowIcon} />
                   </>
                 }
-                className={`${styles.primaryButton} rounded-pill`}
+                className={`${styles.primaryButton} border-0 rounded-pill`}
               />
               {/* <button className={styles.primaryButton}>
                 Start Your Project
                 <ArrowRight size={16} />
               </button> */}       
-              <button className={styles.secondaryButton}>
+              {/* <button className={styles.secondaryButton}>
                 View All Case Studies
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

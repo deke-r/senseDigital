@@ -48,7 +48,7 @@ export default function ContactPage() {
                     <p className={`${isDarkMode ? styles.darkSubtitle : styles.lightSubtitle}`}>
                       MetaSense Digital Marketing Agency<br />
                       Surya Plaza K-185, 2nd Floor<br />
-                      Sarai Jullena, New Delhi-110025
+                      Sarai Jullena, NFC, New Delhi-110025
                     </p>
 
                   </div>

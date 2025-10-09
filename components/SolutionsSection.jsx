@@ -218,7 +218,7 @@ const SolutionsSection = () => {
                 <Users size={24} />
               </div>
               <div className={styles.statContent}>
-                <div className={styles.statNumber}>500+</div>
+                <div className={styles.statNumber}>125+</div>
                 <div className={styles.statLabel}>Happy Clients</div>
               </div>
             </div>
@@ -227,7 +227,7 @@ const SolutionsSection = () => {
                 <Rocket size={24} />
               </div>
               <div className={styles.statContent}>
-                <div className={styles.statNumber}>1000+</div>
+                <div className={styles.statNumber}>175+</div>
                 <div className={styles.statLabel}>Projects Completed</div>
               </div>
             </div>
@@ -236,8 +236,8 @@ const SolutionsSection = () => {
                 <TrendingUp size={24} />
               </div>
               <div className={styles.statContent}>
-                <div className={styles.statNumber}>250%</div>
-                <div className={styles.statLabel}>Average Growth</div>
+                <div className={styles.statNumber}>98%</div>
+                <div className={styles.statLabel}>Success Rate</div>
               </div>
             </div>
             <div className={styles.statCard}>
@@ -245,8 +245,8 @@ const SolutionsSection = () => {
                 <Shield size={24} />
               </div>
               <div className={styles.statContent}>
-                <div className={styles.statNumber}>99%</div>
-                <div className={styles.statLabel}>Client Retention</div>
+                <div className={styles.statNumber}>98%</div>
+                <div className={styles.statLabel}>Client Retention Rate   </div>
               </div>
             </div>
           </div>
