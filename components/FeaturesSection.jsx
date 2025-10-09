@@ -1,48 +1,62 @@
 "use client"
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import { Code, Palette, Search, Smartphone, BarChart3, Shield, ArrowRight } from 'lucide-react'
 import styles from '../styles/components/features-section.module.css'
 import CTATriggerButton from './CTATriggerButton'
 
 const FeaturesSection = () => {
+  const router = useRouter()
+
   const features = [
     {
       icon: <Code className={styles.featureIcon} />,
       title: "Web Development",
       description: "Custom websites and web applications built with modern technologies and best practices.",
-      color: "#3a4ef9"
+      color: "#3a4ef9",
+      route: "/services/website-development"
     },
     {
       icon: <Smartphone className={styles.featureIcon} />,
       title: "Mobile App Development",
       description: "Native and cross-platform mobile applications for iOS and Android devices.",
-      color: "#3df3e5"
+      color: "#3df3e5",
+      route: "/services/app-development"
     },
     {
       icon: <Search className={styles.featureIcon} />,
       title: "SEO Services",
       description: "Comprehensive search engine optimization to improve your online visibility.",
-      color: "#ff6b6b"
+      color: "#ff6b6b",
+      route: "/services/on-page-seo"
     },
     {
       icon: <BarChart3 className={styles.featureIcon} />,
       title: "Digital Marketing",
       description: "Data-driven marketing strategies to grow your business and reach your target audience.",
-      color: "#4ecdc4"
+      color: "#4ecdc4",
+      route: "/services/digital-marketing"
     },
     {
       icon: <Palette className={styles.featureIcon} />,
       title: "UI/UX Design",
       description: "Beautiful and intuitive user interfaces that provide exceptional user experiences.",
-      color: "#45b7d1"
+      color: "#45b7d1",
+      route: "/services/ui-ux"
     },
     {
       icon: <Shield className={styles.featureIcon} />,
-      title: "Security & Maintenance",
-      description: "Ongoing security updates and maintenance to keep your applications running smoothly.",
-      color: "#96ceb4"
+      title: "Software Development",
+      description: "Custom software solutions designed to streamline business processes, enhance user experience, and drive growth.",
+      color: "#96ceb4",
+      route: "/services/software-development"
     }
+    
   ]
+
+  const handleCardClick = (route) => {
+    router.push(route)
+  }
 
   return (
     <section className={styles.featuresSection}>
@@ -63,7 +77,11 @@ const FeaturesSection = () => {
         <div className="row">
           {features.map((feature, index) => (
             <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className={styles.featureCard}>
+              <div 
+                className={styles.featureCard}
+                onClick={() => handleCardClick(feature.route)}
+                style={{ cursor: 'pointer' }}
+              >
                 <div className={styles.featureIconContainer} style={{ backgroundColor: `${feature.color}20` }}>
                   <div className={styles.featureIconWrapper} style={{ color: feature.color }}>
                     {feature.icon}
